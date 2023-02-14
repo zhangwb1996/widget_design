@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:10:42 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 10:12:25 pm
+/// Last Modified: Tuesday, 2023-02-14 10:21:17 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -17,8 +17,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:widget_design/src/models/properties/widget_default.dart';
-import 'package:widget_design/src/widgets_view/animation_and_motion/animated_align.dart';
+import 'package:widget_design/src/models/properties/default/widget.dart';
+import 'package:widget_design/src/widgets/animation_and_motion/animated_align.dart';
 
 import 'common/components/widget.dart';
 import 'common/tools/widget.dart';
