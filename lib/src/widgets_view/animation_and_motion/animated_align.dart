@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 11:01:08 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 2:10:38 pm
+/// Last Modified: Tuesday, 2023-02-14 6:22:13 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -47,16 +47,6 @@ class AnimatedAlignWidget extends StatelessWidget {
               );
             },
           ),
-          // child: AnimatedAlign(
-          //   alignment: animationProperties.selected
-          //       ? Alignment.topRight
-          //       : animationProperties.alignment ?? Alignment.topLeft,
-          //   duration: Duration(seconds: animationProperties.duration),
-          //   curve: (animationProperties.cubic ?? animationProperties.curve) ??
-          //       Curves.linear,
-          //   // curve: Curves.linear,
-          //   child: const FlutterLogo(size: 50.0),
-          // ),
         ),
       ),
     );

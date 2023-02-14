@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:10:42 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 5:22:30 pm
+/// Last Modified: Tuesday, 2023-02-14 6:25:28 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -34,19 +34,25 @@ class _WidgetDesignState extends State<WidgetDesign> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const AnimatedAlignWidget(),
-        const VerticalDivider(),
+        const Placeholder(fallbackWidth: 200),
+        // widget view
         Expanded(
           child: Column(
+            children: const [
+              Expanded(child: AnimatedAlignWidget()),
+              Divider(),
+              Placeholder(),
+            ],
+          ),
+        ),
+        const VerticalDivider(),
+        // designer
+        SizedBox(
+          width: 300,
+          child: Column(
             children: [
-              Container(),
-              const CheckboxDesigner(),
-              const RadioDesigner(),
-              // Consumer<AnimationPropertiesModel>(
-              //   builder: (context, animProperties, child) => DropdownDesigner(
-              //     items: animProperties.listAlignment,
-              //   ),
-              // ),
+              // const CheckboxDesigner(),
+              // const RadioDesigner(),
               Selector<AnimationPropertiesModel, List<AlignmentGeometry>>(
                 selector: (_, animProperties) => animProperties.listAlignment,
                 builder: (context, list, child) => DropdownDesignerAlignment(
@@ -59,7 +65,7 @@ class _WidgetDesignState extends State<WidgetDesign> {
                   items: list,
                 ),
               ),
-              const NumberDesigner()
+              const NumberDesigner(),
             ],
           ),
         ),
