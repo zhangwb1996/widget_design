@@ -5,7 +5,7 @@
 /// Created Date: Monday, 2023-02-13 5:34:10 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 9:58:31 pm
+/// Last Modified: Tuesday, 2023-02-14 11:13:39 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -15,4 +15,5 @@
 /// ----------	---	---------------------------------------------------------
 ///
 
-export '../animation_and_motion/animation_properties.dart';
+export 'animated_align_model.dart';
+export 'animation_properties_model.dart';
