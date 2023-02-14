@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:10:42 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 11:23:49 pm
+/// Last Modified: Tuesday, 2023-02-14 11:31:14 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -36,9 +36,10 @@ class _WidgetDesignState extends State<WidgetDesign> {
         Expanded(
           child: AnimatedAlignView(),
         ),
-        Expanded(
-          child: AnimatedAlignView(),
-        ),
+        // the two providers are different
+        // Expanded(
+        //   child: AnimatedAlignView(),
+        // ),
       ],
     );
   }
