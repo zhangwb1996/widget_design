@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:10:42 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 4:26:31 pm
+/// Last Modified: Tuesday, 2023-02-14 4:40:13 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -49,6 +49,12 @@ class _WidgetDesignState extends State<WidgetDesign> {
               // ),
               Selector<AnimationPropertiesModel, List<AlignmentGeometry>>(
                 selector: (_, animProperties) => animProperties.listAlignment,
+                builder: (context, list, child) => DropdownDesigner(
+                  items: list,
+                ),
+              ),
+              Selector<AnimationPropertiesModel, List<Curve>>(
+                selector: (_, animProperties) => animProperties.listCurve,
                 builder: (context, list, child) => DropdownDesigner(
                   items: list,
                 ),

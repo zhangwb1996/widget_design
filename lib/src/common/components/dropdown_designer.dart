@@ -5,7 +5,7 @@
 /// Created Date: Monday, 2023-02-13 9:54:48 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 4:06:23 pm
+/// Last Modified: Tuesday, 2023-02-14 4:57:01 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -19,8 +19,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../models/animation_and_motion/widget.dart';
-
-typedef TypeAlignmentGeometry = AlignmentGeometry;
 
 class DropdownDesigner extends StatefulWidget {
   final List<dynamic> items;
@@ -39,10 +37,20 @@ class _DropdownDesignerState extends State<DropdownDesigner> {
   @override
   Widget build(BuildContext context) {
     debugPrint(
-        "dropdown_designer items runtimeType: ${widget.items[0].runtimeType} ");
-    switch (widget.items[0].runtimeType) {
+      "dropdown_designer items runtimeType: ${widget.items[2].runtimeType}",
+    );
+    // TODO: pass  Type as a parameter
+    switch (widget.items[2].runtimeType) {
       case Alignment:
-        return alignmentDropdownBuilder();
+        return alignmentDropdownBuilder(
+          context.select((AnimationPropertiesModel a) => a.alignment),
+        );
+
+      case Curve:
+      case Cubic:
+        return curveDropdownBuilder(
+          context.select((AnimationPropertiesModel a) => a.curve),
+        );
       default:
         return Container();
     }
@@ -73,11 +81,11 @@ class _DropdownDesignerState extends State<DropdownDesigner> {
     // );
   }
 
-  Consumer<AnimationPropertiesModel> alignmentDropdownBuilder() {
-    var selector = context.select((AnimationPropertiesModel a) => a.alignment);
+  Consumer<AnimationPropertiesModel> alignmentDropdownBuilder(
+      dynamic selector) {
     return Consumer<AnimationPropertiesModel>(
         builder: (context, animProperties, child) {
-      return DropdownButton<TypeAlignmentGeometry>(
+      return DropdownButton<dynamic>(
         value: selector,
         elevation: 16,
         style: const TextStyle(color: Colors.deepPurple),
@@ -85,13 +93,37 @@ class _DropdownDesignerState extends State<DropdownDesigner> {
           height: 2,
           color: Colors.deepPurpleAccent,
         ),
-        onChanged: (TypeAlignmentGeometry? value) {
-          animProperties.alignment = value!;
+        onChanged: (value) {
+          animProperties.alignment = value;
         },
-        items:
-            widget.items.map<DropdownMenuItem<TypeAlignmentGeometry>>((value) {
-          return DropdownMenuItem<TypeAlignmentGeometry>(
+        items: widget.items.map<DropdownMenuItem<dynamic>>((value) {
+          return DropdownMenuItem<dynamic>(
             value: value,
+            child: Text(value.toString()),
+          );
+        }).toList(),
+      );
+    });
+  }
+
+  Consumer<AnimationPropertiesModel> curveDropdownBuilder(dynamic selector) {
+    return Consumer<AnimationPropertiesModel>(
+        builder: (context, animProperties, child) {
+      return DropdownButton<dynamic>(
+        value: selector,
+        elevation: 16,
+        style: const TextStyle(color: Colors.deepPurple),
+        underline: Container(
+          height: 2,
+          color: Colors.deepPurpleAccent,
+        ),
+        onChanged: (value) {
+          animProperties.curve = value;
+        },
+        items: widget.items.map<DropdownMenuItem<dynamic>>((value) {
+          return DropdownMenuItem<dynamic>(
+            value: value,
+            // TODO: show name of the curve instead of the function
             child: Text(value.toString()),
           );
         }).toList(),

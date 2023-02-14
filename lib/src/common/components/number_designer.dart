@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 10:31:36 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 3:15:09 pm
+/// Last Modified: Tuesday, 2023-02-14 4:35:47 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -96,14 +96,11 @@ class _NumberDesignerState extends State<NumberDesigner> {
     /// Consumer
     return Consumer<AnimationPropertiesModel>(
       builder: (context, animationProperties, child) => TextField(
-        // focusNode:,
-        // textInputAction:,
         controller: controller,
         onChanged: (v) {
           if (RegExp(r"^\d+$").allMatches(v, 0).isEmpty) {
             controller.text = '';
           }
-          // animationProperties.duration = int.parse(controller.text);
           animationProperties.duration =
               int.parse(controller.text.isEmpty ? '0' : controller.text);
         },
