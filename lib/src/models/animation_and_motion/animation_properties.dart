@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 11:02:43 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 4:20:21 pm
+/// Last Modified: Tuesday, 2023-02-14 5:21:38 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -37,50 +37,50 @@ class AnimationPropertiesModel extends ChangeNotifier {
 
   /// Curves
   Curve _curve = Curves.easeInCubic;
-  List<Curve> listCurve = [
-    Curves.linear,
-    Curves.decelerate,
-    Curves.fastLinearToSlowEaseIn,
-    Curves.ease,
-    Curves.easeIn,
-    Curves.easeInToLinear,
-    Curves.easeInSine,
-    Curves.easeInQuad,
-    Curves.easeInCubic,
-    Curves.easeInQuart,
-    Curves.easeInQuint,
-    Curves.easeInExpo,
-    Curves.easeInCirc,
-    Curves.easeInBack,
-    Curves.easeOut,
-    Curves.linearToEaseOut,
-    Curves.easeOutSine,
-    Curves.easeOutQuad,
-    Curves.easeOutCubic,
-    Curves.easeOutQuart,
-    Curves.easeOutQuint,
-    Curves.easeOutExpo,
-    Curves.easeOutCirc,
-    Curves.easeOutBack,
-    Curves.easeInOut,
-    Curves.easeInOutSine,
-    Curves.easeInOutQuad,
-    Curves.easeInOutCubic,
-    Curves.easeInOutCubicEmphasized,
-    Curves.easeInOutQuart,
-    Curves.easeInOutQuint,
-    Curves.easeInOutExpo,
-    Curves.easeInOutCirc,
-    Curves.easeInOutBack,
-    Curves.fastOutSlowIn,
-    Curves.slowMiddle,
-    Curves.bounceIn,
-    Curves.bounceOut,
-    Curves.bounceInOut,
-    Curves.elasticIn,
-    Curves.elasticOut,
-    Curves.elasticInOut,
-  ];
+  Map<String, Curve> listCurve = {
+    'Curves.linear': Curves.linear,
+    'Curves.decelerate': Curves.decelerate,
+    'Curves.fastLinearToSlowEaseIn': Curves.fastLinearToSlowEaseIn,
+    'Curves.ease': Curves.ease,
+    'Curves.easeIn': Curves.easeIn,
+    'Curves.easeInToLinear': Curves.easeInToLinear,
+    'Curves.easeInSine': Curves.easeInSine,
+    'Curves.easeInQuad': Curves.easeInQuad,
+    'Curves.easeInCubic': Curves.easeInCubic,
+    'Curves.easeInQuart': Curves.easeInQuart,
+    'Curves.easeInQuint': Curves.easeInQuint,
+    'Curves.easeInExpo': Curves.easeInExpo,
+    'Curves.easeInCirc': Curves.easeInCirc,
+    'Curves.easeInBack': Curves.easeInBack,
+    'Curves.easeOut': Curves.easeOut,
+    'Curves.linearToEaseOut': Curves.linearToEaseOut,
+    'Curves.easeOutSine': Curves.easeOutSine,
+    'Curves.easeOutQuad': Curves.easeOutQuad,
+    'Curves.easeOutCubic': Curves.easeOutCubic,
+    'Curves.easeOutQuart': Curves.easeOutQuart,
+    'Curves.easeOutQuint': Curves.easeOutQuint,
+    'Curves.easeOutExpo': Curves.easeOutExpo,
+    'Curves.easeOutCirc': Curves.easeOutCirc,
+    'Curves.easeOutBack': Curves.easeOutBack,
+    'Curves.easeInOut': Curves.easeInOut,
+    'Curves.easeInOutSine': Curves.easeInOutSine,
+    'Curves.easeInOutQuad': Curves.easeInOutQuad,
+    'Curves.easeInOutCubic': Curves.easeInOutCubic,
+    'Curves.easeInOutCubicEmphasized': Curves.easeInOutCubicEmphasized,
+    'Curves.easeInOutQuart': Curves.easeInOutQuart,
+    'Curves.easeInOutQuint': Curves.easeInOutQuint,
+    'Curves.easeInOutExpo': Curves.easeInOutExpo,
+    'Curves.easeInOutCirc': Curves.easeInOutCirc,
+    'Curves.easeInOutBack': Curves.easeInOutBack,
+    'Curves.fastOutSlowIn': Curves.fastOutSlowIn,
+    'Curves.slowMiddle': Curves.slowMiddle,
+    'Curves.bounceIn': Curves.bounceIn,
+    'Curves.bounceOut': Curves.bounceOut,
+    'Curves.bounceInOut': Curves.bounceInOut,
+    'Curves.elasticIn': Curves.elasticIn,
+    'Curves.elasticOut': Curves.elasticOut,
+    'Curves.elasticInOut': Curves.elasticInOut,
+  };
 
   bool selected = false;
 
