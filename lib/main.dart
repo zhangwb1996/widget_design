@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:09:16 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 10:38:01 pm
+/// Last Modified: Tuesday, 2023-02-14 11:20:41 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -16,12 +16,9 @@
 ///
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+
 import 'package:widget_design/src/common/theme/theme.dart';
-
-import 'package:widget_design/src/models/widgets/animation_and_motion/widget.dart';
-
-import 'src/widget_design.dart';
+import 'package:widget_design/src/widget_design.dart';
 
 void main() {
   runApp(const MyApp());
