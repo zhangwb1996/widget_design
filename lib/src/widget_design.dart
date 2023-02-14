@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:10:42 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 9:59:27 pm
+/// Last Modified: Tuesday, 2023-02-14 10:12:25 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -17,6 +17,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:widget_design/src/models/properties/widget_default.dart';
 import 'package:widget_design/src/widgets_view/animation_and_motion/animated_align.dart';
 
 import 'common/components/widget.dart';
@@ -63,13 +64,13 @@ class _WidgetDesignState extends State<WidgetDesign> {
               // const CheckboxDesigner(),
               // const RadioDesigner(),
               Selector<AnimationPropertiesModel, List<AlignmentGeometry>>(
-                selector: (_, animProperties) => animProperties.listAlignment,
+                selector: (_, animProperties) => AlignmentList.listAlignment,
                 builder: (context, list, child) => DropdownDesignerAlignment(
                   items: list,
                 ),
               ),
               Selector<AnimationPropertiesModel, Map<String, Curve>>(
-                selector: (_, animProperties) => animProperties.listCurve,
+                selector: (_, animProperties) => CurveMap.mapCurve,
                 builder: (context, list, child) => DropdownDesignerCurve(
                   items: list,
                 ),
