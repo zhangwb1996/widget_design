@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:10:42 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 10:26:31 pm
+/// Last Modified: Tuesday, 2023-02-14 10:46:33 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -39,44 +39,109 @@ class _WidgetDesignState extends State<WidgetDesign> {
         const Placeholder(fallbackWidth: 200),
         const VerticalDivider(),
         Expanded(
-          child: Column(
-            children: [
-              // widget view
-              const Expanded(child: AnimatedAlignWidget()),
-              const Divider(),
-              // syntax highlighting
-              // TODO: show dart code with syntax highlighting and copy code by one key
-              Selector<AnimatedAlignModel, String>(
-                selector: (_, animProperties) => animProperties.code,
-                builder: (context, code, child) => SyntaxHighlight(
-                  code: code,
+          child: ChangeNotifierProvider(
+            create: (BuildContext context) => AnimatedAlignModel(),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    children: [
+                      // widget view
+                      const Expanded(child: AnimatedAlignWidget()),
+                      const Divider(),
+                      // syntax highlighting
+                      // TODO: show dart code with syntax highlighting and copy code by one key
+                      Selector<AnimatedAlignModel, String>(
+                        selector: (_, animProperties) => animProperties.code,
+                        builder: (context, code, child) => SyntaxHighlight(
+                          code: code,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+                const VerticalDivider(),
+                // designer
+                SizedBox(
+                  width: 300,
+                  child: Column(
+                    children: [
+                      // const CheckboxDesigner(),
+                      // const RadioDesigner(),
+                      Selector<AnimatedAlignModel, List<AlignmentGeometry>>(
+                        selector: (_, animProperties) =>
+                            AlignmentList.listAlignment,
+                        builder: (context, list, child) =>
+                            DropdownDesignerAlignment(
+                          items: list,
+                        ),
+                      ),
+                      Selector<AnimatedAlignModel, Map<String, Curve>>(
+                        selector: (_, animProperties) => CurveMap.mapCurve,
+                        builder: (context, list, child) =>
+                            DropdownDesignerCurve(
+                          items: list,
+                        ),
+                      ),
+                      const NumberDesigner(),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
-        const VerticalDivider(),
-        // designer
-        SizedBox(
-          width: 300,
-          child: Column(
-            children: [
-              // const CheckboxDesigner(),
-              // const RadioDesigner(),
-              Selector<AnimatedAlignModel, List<AlignmentGeometry>>(
-                selector: (_, animProperties) => AlignmentList.listAlignment,
-                builder: (context, list, child) => DropdownDesignerAlignment(
-                  items: list,
+        Expanded(
+          child: ChangeNotifierProvider(
+            create: (BuildContext context) => AnimatedAlignModel(),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    children: [
+                      // widget view
+                      const Expanded(child: AnimatedAlignWidget()),
+                      const Divider(),
+                      // syntax highlighting
+                      // TODO: show dart code with syntax highlighting and copy code by one key
+                      Selector<AnimatedAlignModel, String>(
+                        selector: (_, animProperties) => animProperties.code,
+                        builder: (context, code, child) => SyntaxHighlight(
+                          code: code,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Selector<AnimatedAlignModel, Map<String, Curve>>(
-                selector: (_, animProperties) => CurveMap.mapCurve,
-                builder: (context, list, child) => DropdownDesignerCurve(
-                  items: list,
+                const VerticalDivider(),
+                // designer
+                SizedBox(
+                  width: 300,
+                  child: Column(
+                    children: [
+                      // const CheckboxDesigner(),
+                      // const RadioDesigner(),
+                      Selector<AnimatedAlignModel, List<AlignmentGeometry>>(
+                        selector: (_, animProperties) =>
+                            AlignmentList.listAlignment,
+                        builder: (context, list, child) =>
+                            DropdownDesignerAlignment(
+                          items: list,
+                        ),
+                      ),
+                      Selector<AnimatedAlignModel, Map<String, Curve>>(
+                        selector: (_, animProperties) => CurveMap.mapCurve,
+                        builder: (context, list, child) =>
+                            DropdownDesignerCurve(
+                          items: list,
+                        ),
+                      ),
+                      const NumberDesigner(),
+                    ],
+                  ),
                 ),
-              ),
-              const NumberDesigner(),
-            ],
+              ],
+            ),
           ),
         ),
       ],
