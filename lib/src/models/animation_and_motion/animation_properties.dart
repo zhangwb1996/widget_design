@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 11:02:43 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 3:27:14 pm
+/// Last Modified: Tuesday, 2023-02-14 4:20:21 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -94,10 +94,6 @@ class AnimationPropertiesModel extends ChangeNotifier {
         _alignment = value,
         notifyListeners(),
       };
-  // void setAlignment(int i) {
-  //   _alignment = listAlignment[i];
-  //   notifyListeners();
-  // }
 
   int get duration => _duration;
   set duration(int value) {
@@ -110,8 +106,4 @@ class AnimationPropertiesModel extends ChangeNotifier {
         _curve = v,
         notifyListeners(),
       };
-  // void setCurve(int i) {
-  //   _curve = listCurve[i];
-  //   notifyListeners();
-  // }
 }

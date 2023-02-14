@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:10:42 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 4:03:47 pm
+/// Last Modified: Tuesday, 2023-02-14 4:26:31 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -40,7 +40,7 @@ class _WidgetDesignState extends State<WidgetDesign> {
           child: Column(
             children: [
               Container(),
-              CheckboxDesigner(),
+              const CheckboxDesigner(),
               const RadioDesigner(),
               // Consumer<AnimationPropertiesModel>(
               //   builder: (context, animProperties, child) => DropdownDesigner(

@@ -5,7 +5,7 @@
 /// Created Date: Monday, 2023-02-13 6:10:00 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 10:27:22 am
+/// Last Modified: Tuesday, 2023-02-14 4:25:58 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -18,15 +18,15 @@
 import 'package:flutter/material.dart';
 
 class CheckboxDesigner extends StatefulWidget {
-  bool isChecked = false;
-
-  CheckboxDesigner({super.key});
+  const CheckboxDesigner({super.key});
 
   @override
   State<CheckboxDesigner> createState() => _CheckboxDesignerState();
 }
 
 class _CheckboxDesignerState extends State<CheckboxDesigner> {
+  bool isChecked = false;
+
   @override
   Widget build(BuildContext context) {
     Color getColor(Set<MaterialState> states) {
@@ -44,10 +44,10 @@ class _CheckboxDesignerState extends State<CheckboxDesigner> {
     return Checkbox(
       checkColor: Colors.white,
       fillColor: MaterialStateProperty.resolveWith(getColor),
-      value: widget.isChecked,
+      value: isChecked,
       onChanged: (bool? value) {
         setState(() {
-          widget.isChecked = value!;
+          isChecked = value!;
         });
       },
     );
