@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 10:31:36 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 7:43:48 pm
+/// Last Modified: Tuesday, 2023-02-14 9:59:02 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -18,7 +18,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../models/animation_and_motion/widget.dart';
+import 'package:widget_design/src/models/widgets/animation_and_motion/widget.dart';
 
 class NumberDesigner extends StatefulWidget {
   const NumberDesigner({super.key});

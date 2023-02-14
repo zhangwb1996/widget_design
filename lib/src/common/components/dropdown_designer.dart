@@ -5,7 +5,7 @@
 /// Created Date: Monday, 2023-02-13 9:54:48 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 4:57:01 pm
+/// Last Modified: Tuesday, 2023-02-14 9:58:58 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -18,7 +18,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../models/animation_and_motion/widget.dart';
+import 'package:widget_design/src/models/widgets/animation_and_motion/widget.dart';
 
 class DropdownDesigner extends StatefulWidget {
   final List<dynamic> items;

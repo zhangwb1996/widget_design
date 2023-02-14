@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 5:09:30 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 7:43:24 pm
+/// Last Modified: Tuesday, 2023-02-14 9:58:53 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -18,7 +18,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../models/animation_and_motion/widget.dart';
+import 'package:widget_design/src/models/widgets/animation_and_motion/widget.dart';
 
 class DropdownDesignerCurve extends StatefulWidget {
   final Map<String, dynamic> items;
