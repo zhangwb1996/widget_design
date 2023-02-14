@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 5:09:55 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 5:29:50 pm
+/// Last Modified: Tuesday, 2023-02-14 7:40:49 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -51,6 +51,7 @@ class _DropdownDesignerAlignmentState extends State<DropdownDesignerAlignment> {
         ),
         onChanged: (value) {
           animProperties.alignment = value;
+          animProperties.setCode();
         },
         items: widget.items.map<DropdownMenuItem<dynamic>>((value) {
           return DropdownMenuItem<dynamic>(

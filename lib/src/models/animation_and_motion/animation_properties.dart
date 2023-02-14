@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 11:02:43 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 5:21:38 pm
+/// Last Modified: Tuesday, 2023-02-14 9:51:57 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -83,6 +83,25 @@ class AnimationPropertiesModel extends ChangeNotifier {
   };
 
   bool selected = false;
+
+  String _code = ' ';
+  String get code => _code;
+  void setCode() {
+    _code = '''  
+    return GestureDetector(
+      onTap: () {
+        selected=!selected;
+      },
+      child: AnimatedAlign(
+        alignment:selected? Alignment.topRight:$alignment,
+        duration: $duration,
+        curve: ${listCurve.keys.firstWhere((k) => listCurve[k] == _curve)},
+        child: const FlutterLogo(size: 50.0),
+      ),
+    );   
+''';
+    notifyListeners();
+  }
 
   void setSelected() {
     selected = !selected;

@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 5:09:30 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 5:26:02 pm
+/// Last Modified: Tuesday, 2023-02-14 7:43:24 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -50,6 +50,7 @@ class _DropdownDesignerCurveState extends State<DropdownDesignerCurve> {
         ),
         onChanged: (value) {
           animProperties.curve = value;
+          animProperties.setCode();
         },
         items: widget.items.values.map<DropdownMenuItem<dynamic>>((value) {
           return DropdownMenuItem<dynamic>(

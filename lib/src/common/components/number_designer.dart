@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 10:31:36 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 4:35:47 pm
+/// Last Modified: Tuesday, 2023-02-14 7:43:48 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -103,6 +103,7 @@ class _NumberDesignerState extends State<NumberDesigner> {
           }
           animationProperties.duration =
               int.parse(controller.text.isEmpty ? '0' : controller.text);
+          animationProperties.setCode();
         },
       ),
     );

@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:10:42 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 6:25:28 pm
+/// Last Modified: Tuesday, 2023-02-14 7:48:16 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -20,6 +20,7 @@ import 'package:provider/provider.dart';
 import 'package:widget_design/src/widgets_view/animation_and_motion/animated_align.dart';
 
 import 'common/components/widget.dart';
+import 'common/tools/widget.dart';
 import 'models/animation_and_motion/widget.dart';
 
 class WidgetDesign extends StatefulWidget {
@@ -35,13 +36,21 @@ class _WidgetDesignState extends State<WidgetDesign> {
     return Row(
       children: [
         const Placeholder(fallbackWidth: 200),
-        // widget view
+        const VerticalDivider(),
         Expanded(
           child: Column(
-            children: const [
-              Expanded(child: AnimatedAlignWidget()),
-              Divider(),
-              Placeholder(),
+            children: [
+              // widget view
+              const Expanded(child: AnimatedAlignWidget()),
+              const Divider(),
+              // syntax highlighting
+              // TODO: show dart code with syntax highlighting and copy code by one key
+              Selector<AnimationPropertiesModel, String>(
+                selector: (_, animProperties) => animProperties.code,
+                builder: (context, code, child) => SyntaxHighlight(
+                  code: code,
+                ),
+              ),
             ],
           ),
         ),
