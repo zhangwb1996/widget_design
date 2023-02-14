@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:10:42 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 10:21:17 pm
+/// Last Modified: Tuesday, 2023-02-14 10:26:31 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -46,7 +46,7 @@ class _WidgetDesignState extends State<WidgetDesign> {
               const Divider(),
               // syntax highlighting
               // TODO: show dart code with syntax highlighting and copy code by one key
-              Selector<AnimationPropertiesModel, String>(
+              Selector<AnimatedAlignModel, String>(
                 selector: (_, animProperties) => animProperties.code,
                 builder: (context, code, child) => SyntaxHighlight(
                   code: code,
@@ -63,13 +63,13 @@ class _WidgetDesignState extends State<WidgetDesign> {
             children: [
               // const CheckboxDesigner(),
               // const RadioDesigner(),
-              Selector<AnimationPropertiesModel, List<AlignmentGeometry>>(
+              Selector<AnimatedAlignModel, List<AlignmentGeometry>>(
                 selector: (_, animProperties) => AlignmentList.listAlignment,
                 builder: (context, list, child) => DropdownDesignerAlignment(
                   items: list,
                 ),
               ),
-              Selector<AnimationPropertiesModel, Map<String, Curve>>(
+              Selector<AnimatedAlignModel, Map<String, Curve>>(
                 selector: (_, animProperties) => CurveMap.mapCurve,
                 builder: (context, list, child) => DropdownDesignerCurve(
                   items: list,

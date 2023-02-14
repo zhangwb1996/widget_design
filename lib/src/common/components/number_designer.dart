@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 10:31:36 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 9:59:02 pm
+/// Last Modified: Tuesday, 2023-02-14 10:26:26 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -46,11 +46,11 @@ class _NumberDesignerState extends State<NumberDesigner> {
     debugPrint('NumberDesigner.build');
 
     /// context.select
-    // var dur = context.select<AnimationPropertiesModel, int>(
+    // var dur = context.select<AnimatedAlignModel, int>(
     //   (model) => model.duration,
     // );
     var dur = context.select(
-      (AnimationPropertiesModel model) => model.duration,
+      (AnimatedAlignModel model) => model.duration,
     );
     controller.text = dur.toString();
     controller.selection =
@@ -67,7 +67,7 @@ class _NumberDesignerState extends State<NumberDesigner> {
     // );
 
     /// Selector<>
-    // return Selector<AnimationPropertiesModel, int>(
+    // return Selector<AnimatedAlignModel, int>(
     //   selector: (_, animationProperties) => animationProperties.duration,
     //   builder: (context, data, child) => TextField(
     //     controller: controller,
@@ -81,7 +81,7 @@ class _NumberDesignerState extends State<NumberDesigner> {
     // );
 
     /// context.watch
-    // var dur1 = context.watch<AnimationPropertiesModel>();
+    // var dur1 = context.watch<AnimatedAlignModel>();
     // controller.text = dur1.duration.toString();
     // return TextField(
     //   controller: controller,
@@ -94,7 +94,7 @@ class _NumberDesignerState extends State<NumberDesigner> {
     // );
 
     /// Consumer
-    return Consumer<AnimationPropertiesModel>(
+    return Consumer<AnimatedAlignModel>(
       builder: (context, animationProperties, child) => TextField(
         controller: controller,
         onChanged: (v) {

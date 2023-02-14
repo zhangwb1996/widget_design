@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:09:16 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 9:59:34 pm
+/// Last Modified: Tuesday, 2023-02-14 10:26:26 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -38,8 +38,8 @@ class MyApp extends StatelessWidget {
         // Provider(create: (context) => Alignment()),
         // alignment:
         // ChangeNotifierProxyProvider<AlignmentGeometry,
-        //     AnimationPropertiesModel>(
-        //   create: (context) => AnimationPropertiesModel(),
+        //     AnimatedAlignModel>(
+        //   create: (context) => AnimatedAlignModel(),
         //   update: (context, alignment, animationProperties) {
         //     if (animationProperties == null) {
         //       throw ArgumentError.notNull('AnimationProperties');
@@ -49,12 +49,12 @@ class MyApp extends StatelessWidget {
         //   },
         // ),
         ChangeNotifierProvider(
-          create: (context) => AnimationPropertiesModel(),
+          create: (context) => AnimatedAlignModel(),
           lazy: true,
         ),
         // curve
-        // ChangeNotifierProxyProvider<Curve, AnimationPropertiesModel>(
-        //   create: (context) => AnimationPropertiesModel(),
+        // ChangeNotifierProxyProvider<Curve, AnimatedAlignModel>(
+        //   create: (context) => AnimatedAlignModel(),
         //   update: (context, curve, animationProperties) {
         //     if (animationProperties == null) {
         //       throw ArgumentError.notNull('AnimationProperties');
@@ -64,8 +64,8 @@ class MyApp extends StatelessWidget {
         //   },
         // ),
         // cubic
-        // ChangeNotifierProxyProvider<Cubic, AnimationPropertiesModel>(
-        //   create: (context) => AnimationPropertiesModel(),
+        // ChangeNotifierProxyProvider<Cubic, AnimatedAlignModel>(
+        //   create: (context) => AnimatedAlignModel(),
         //   update: (context, cubic, animationProperties) {
         //     if (animationProperties == null) {
         //       throw ArgumentError.notNull('AnimationProperties');

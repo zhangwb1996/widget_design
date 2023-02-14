@@ -5,7 +5,7 @@
 /// Created Date: Monday, 2023-02-13 9:54:48 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 9:58:58 pm
+/// Last Modified: Tuesday, 2023-02-14 10:26:26 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -43,21 +43,21 @@ class _DropdownDesignerState extends State<DropdownDesigner> {
     switch (widget.items[2].runtimeType) {
       case Alignment:
         return alignmentDropdownBuilder(
-          context.select((AnimationPropertiesModel a) => a.alignment),
+          context.select((AnimatedAlignModel a) => a.alignment),
         );
 
       case Curve:
       case Cubic:
         return curveDropdownBuilder(
-          context.select((AnimationPropertiesModel a) => a.curve),
+          context.select((AnimatedAlignModel a) => a.curve),
         );
       default:
         return Container();
     }
 
-    // var alignment = context.select((AnimationPropertiesModel a) => a.alignment);
-    // var curve = context.select((AnimationPropertiesModel a) => a.curve);
-    // return Consumer<AnimationPropertiesModel>(
+    // var alignment = context.select((AnimatedAlignModel a) => a.alignment);
+    // var curve = context.select((AnimatedAlignModel a) => a.curve);
+    // return Consumer<AnimatedAlignModel>(
     //   builder: (context, animProperties, child) => DropdownButton<Curve>(
     //     value: curve,
     //     elevation: 16,
@@ -81,9 +81,8 @@ class _DropdownDesignerState extends State<DropdownDesigner> {
     // );
   }
 
-  Consumer<AnimationPropertiesModel> alignmentDropdownBuilder(
-      dynamic selector) {
-    return Consumer<AnimationPropertiesModel>(
+  Consumer<AnimatedAlignModel> alignmentDropdownBuilder(dynamic selector) {
+    return Consumer<AnimatedAlignModel>(
         builder: (context, animProperties, child) {
       return DropdownButton<dynamic>(
         value: selector,
@@ -106,8 +105,8 @@ class _DropdownDesignerState extends State<DropdownDesigner> {
     });
   }
 
-  Consumer<AnimationPropertiesModel> curveDropdownBuilder(dynamic selector) {
-    return Consumer<AnimationPropertiesModel>(
+  Consumer<AnimatedAlignModel> curveDropdownBuilder(dynamic selector) {
+    return Consumer<AnimatedAlignModel>(
         builder: (context, animProperties, child) {
       return DropdownButton<dynamic>(
         value: selector,

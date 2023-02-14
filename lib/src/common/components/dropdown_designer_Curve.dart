@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 5:09:30 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 9:58:53 pm
+/// Last Modified: Tuesday, 2023-02-14 10:26:31 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -38,10 +38,10 @@ class _DropdownDesignerCurveState extends State<DropdownDesignerCurve> {
     debugPrint(
       "DropdownDesignerCurve.build",
     );
-    return Consumer<AnimationPropertiesModel>(
+    return Consumer<AnimatedAlignModel>(
         builder: (context, animProperties, child) {
       return DropdownButton<dynamic>(
-        value: context.select((AnimationPropertiesModel a) => a.curve),
+        value: context.select((AnimatedAlignModel a) => a.curve),
         elevation: 16,
         style: const TextStyle(color: Colors.deepPurple),
         underline: Container(

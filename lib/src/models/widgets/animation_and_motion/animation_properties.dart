@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 11:02:43 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 10:21:18 pm
+/// Last Modified: Tuesday, 2023-02-14 10:25:25 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -19,7 +19,7 @@ import 'package:flutter/material.dart';
 import 'package:widget_design/src/models/properties/default/widget.dart';
 // import 'package:provider/provider.dart';
 
-class AnimationPropertiesModel extends ChangeNotifier {
+class AnimatedAlignModel extends ChangeNotifier {
   /// AlignmentGeometry
   AlignmentGeometry _alignment = Alignment.topLeft;
 
