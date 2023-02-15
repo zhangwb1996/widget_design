@@ -5,7 +5,7 @@
 /// Created Date: Wednesday, 2023-02-15 2:00:02 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 3:54:20 pm
+/// Last Modified: Wednesday, 2023-02-15 4:04:21 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -33,15 +33,15 @@ class AnimatedContainerModel extends AnimatedModel {
           },
           child: Center(
             child: AnimatedContainer(
-              width: anims.selected ? 200.0 : 100.0,
-              height: anims.selected ? 100.0 : 200.0,
-              color: anims.selected ? Colors.red : Colors.blue,
-              alignment: anims.selected ? Alignment.center : $alignment,
+              width: selected ? 200.0 : 100.0,
+              height: selected ? 100.0 : 200.0,
+              color: selected ? Colors.red : Colors.blue,
+              alignment: selected ? Alignment.center : $alignment,
               duration: Duration(seconds: $duration),
               curve: ${CurveMap.mapCurve.keys.firstWhere((k) => CurveMap.mapCurve[k] == super.curve)}
               child: const FlutterLogo(size: 75),
             ),
-          ),
+          ), 
         );
 ''';
     notifyListeners();
