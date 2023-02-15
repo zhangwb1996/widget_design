@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 11:02:43 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 5:18:38 pm
+/// Last Modified: Wednesday, 2023-02-15 5:57:28 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -18,7 +18,6 @@
 import 'package:widget_design/src/models/properties/default/widget.dart';
 
 import 'animated_model.dart';
-// import 'package:provider/provider.dart';
 
 class AnimatedAlignModel extends AnimatedModel {
   String _code = ' ';

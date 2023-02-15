@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\models\widgets\animation_and_motion\animated_container_model.dart
+/// File: \lib\src\models\widgets\animation_and_motion\animated_crossfade_model.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Wednesday, 2023-02-15 2:00:02 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 5:57:24 pm
+/// Last Modified: Wednesday, 2023-02-15 6:15:36 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -15,33 +15,21 @@
 /// ----------	---	---------------------------------------------------------
 ///
 
-import 'package:widget_design/src/models/properties/default/widget.dart';
-
 import 'animated_model.dart';
 
-class AnimatedContainerModel extends AnimatedModel {
+class AnimatedCrossFadeModel extends AnimatedModel {
   String _code = ' ';
   @override
   String get code => _code;
   @override
   void setCode() {
     _code = '''
-        return GestureDetector(
-          onTap: () {
-            selected=!selected;
-          },
-          child: Center(
-            child: AnimatedContainer(
-              width: selected ? 200.0 : 100.0,
-              height: selected ? 100.0 : 200.0,
-              color: selected ? Colors.red : Colors.blue,
-              alignment: selected ? Alignment.center : $alignment,
-              duration: Duration(seconds: $duration),
-              curve: ${CurveMap.mapCurve.keys.firstWhere((k) => CurveMap.mapCurve[k] == super.curve)}
-              child: const FlutterLogo(size: 75),
-            ),
-          ), 
-        );
+    AnimatedCrossFade(
+      duration: Duration(seconds: $duration),
+      firstChild: const FlutterLogo(style: FlutterLogoStyle.horizontal, size: 100.0),
+      secondChild: const FlutterLogo(style: FlutterLogoStyle.stacked, size: 100.0),
+      crossFadeState: clicked ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+    )
 ''';
     notifyListeners();
   }
