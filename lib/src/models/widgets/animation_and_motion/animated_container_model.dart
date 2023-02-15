@@ -5,7 +5,7 @@
 /// Created Date: Wednesday, 2023-02-15 2:00:02 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 3:11:44 pm
+/// Last Modified: Wednesday, 2023-02-15 3:54:20 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -15,7 +15,6 @@
 /// ----------	---	---------------------------------------------------------
 ///
 
-import 'package:flutter/widgets.dart';
 import 'package:widget_design/src/models/properties/default/widget.dart';
 
 import 'animated_model.dart';
@@ -28,17 +27,22 @@ class AnimatedContainerModel extends AnimatedModel {
   @override
   void setCode() {
     _code = '''
-    return GestureDetector(
-      onTap: () {
-        selected=!selected;
-      },
-      child: AnimatedAlign(
-        alignment:selected? Alignment.topRight:$alignment,
-        duration: $duration,
-        curve: ${CurveMap.mapCurve.keys.firstWhere((k) => CurveMap.mapCurve[k] == super.curve)},
-        child: const FlutterLogo(size: 50.0),
-      ),
-    );
+        return GestureDetector(
+          onTap: () {
+            selected=!selected;
+          },
+          child: Center(
+            child: AnimatedContainer(
+              width: anims.selected ? 200.0 : 100.0,
+              height: anims.selected ? 100.0 : 200.0,
+              color: anims.selected ? Colors.red : Colors.blue,
+              alignment: anims.selected ? Alignment.center : $alignment,
+              duration: Duration(seconds: $duration),
+              curve: ${CurveMap.mapCurve.keys.firstWhere((k) => CurveMap.mapCurve[k] == super.curve)}
+              child: const FlutterLogo(size: 75),
+            ),
+          ),
+        );
 ''';
     notifyListeners();
   }

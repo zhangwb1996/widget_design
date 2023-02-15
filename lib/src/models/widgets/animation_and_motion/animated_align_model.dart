@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 11:02:43 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 3:20:29 pm
+/// Last Modified: Wednesday, 2023-02-15 3:53:14 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -34,7 +34,7 @@ class AnimatedAlignModel extends AnimatedModel {
       },
       child: AnimatedAlign(
         alignment:selected? Alignment.topRight:$alignment,
-        duration: $duration,
+        duration: Duration(seconds: $duration),
         curve: ${CurveMap.mapCurve.keys.firstWhere((k) => CurveMap.mapCurve[k] == super.curve)},
         child: const FlutterLogo(size: 50.0),
       ),
