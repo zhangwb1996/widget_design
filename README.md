@@ -1,10 +1,12 @@
 # widget_design
 
-view = widget +component + component
+view = [widget + tools] + component
 
 ```dart
 view:
     // widgets
-    .....
+    ......
+        // tools
+        ........
     // components
     .....
