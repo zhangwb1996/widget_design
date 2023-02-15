@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\models\widgets\animation_and_motion\animation_properties.dart
+/// File: \lib\src\models\widgets\animation_and_motion\animated_align_model.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Sunday, 2023-02-12 11:02:43 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 10:25:25 pm
+/// Last Modified: Wednesday, 2023-02-15 3:20:29 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -17,22 +17,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:widget_design/src/models/properties/default/widget.dart';
+
+import 'animated_model.dart';
 // import 'package:provider/provider.dart';
 
-class AnimatedAlignModel extends ChangeNotifier {
-  /// AlignmentGeometry
-  AlignmentGeometry _alignment = Alignment.topLeft;
-
-  /// Duration,
-  int _duration = 1;
-
-  /// Curves
-  Curve _curve = Curves.easeInCubic;
-
-  bool selected = false;
-
+class AnimatedAlignModel extends AnimatedModel {
   String _code = ' ';
+  @override
   String get code => _code;
+  @override
   void setCode() {
     _code = '''  
     return GestureDetector(
@@ -42,34 +35,11 @@ class AnimatedAlignModel extends ChangeNotifier {
       child: AnimatedAlign(
         alignment:selected? Alignment.topRight:$alignment,
         duration: $duration,
-        curve: ${CurveMap.mapCurve.keys.firstWhere((k) => CurveMap.mapCurve[k] == _curve)},
+        curve: ${CurveMap.mapCurve.keys.firstWhere((k) => CurveMap.mapCurve[k] == super.curve)},
         child: const FlutterLogo(size: 50.0),
       ),
     );   
 ''';
     notifyListeners();
   }
-
-  void setSelected() {
-    selected = !selected;
-    notifyListeners();
-  }
-
-  AlignmentGeometry get alignment => _alignment;
-  set alignment(value) => {
-        _alignment = value,
-        notifyListeners(),
-      };
-
-  int get duration => _duration;
-  set duration(int value) {
-    _duration = value;
-    notifyListeners();
-  }
-
-  Curve get curve => _curve;
-  set curve(v) => {
-        _curve = v,
-        notifyListeners(),
-      };
 }

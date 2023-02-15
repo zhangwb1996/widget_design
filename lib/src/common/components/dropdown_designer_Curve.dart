@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\common\components\dropdown_designer_Curve.dart
+/// File: \lib\src\common\components\dropdown_designer_curve.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Tuesday, 2023-02-14 5:09:30 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 10:26:31 pm
+/// Last Modified: Wednesday, 2023-02-15 3:22:19 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -20,7 +20,7 @@ import 'package:provider/provider.dart';
 
 import 'package:widget_design/src/models/widgets/animation_and_motion/widget.dart';
 
-class DropdownDesignerCurve extends StatefulWidget {
+class DropdownDesignerCurve<T extends AnimatedModel> extends StatelessWidget {
   final Map<String, dynamic> items;
 
   const DropdownDesignerCurve({
@@ -29,19 +29,13 @@ class DropdownDesignerCurve extends StatefulWidget {
   });
 
   @override
-  State<DropdownDesignerCurve> createState() => _DropdownDesignerCurveState();
-}
-
-class _DropdownDesignerCurveState extends State<DropdownDesignerCurve> {
-  @override
   Widget build(BuildContext context) {
     debugPrint(
       "DropdownDesignerCurve.build",
     );
-    return Consumer<AnimatedAlignModel>(
-        builder: (context, animProperties, child) {
+    return Consumer<T>(builder: (context, animProperties, child) {
       return DropdownButton<dynamic>(
-        value: context.select((AnimatedAlignModel a) => a.curve),
+        value: context.select((T a) => a.curve),
         elevation: 16,
         style: const TextStyle(color: Colors.deepPurple),
         underline: Container(
@@ -52,12 +46,12 @@ class _DropdownDesignerCurveState extends State<DropdownDesignerCurve> {
           animProperties.curve = value;
           animProperties.setCode();
         },
-        items: widget.items.values.map<DropdownMenuItem<dynamic>>((value) {
+        items: items.values.map<DropdownMenuItem<dynamic>>((value) {
           return DropdownMenuItem<dynamic>(
             value: value,
             child: Text(
-              widget.items.keys.firstWhere(
-                (k) => widget.items[k] == value,
+              items.keys.firstWhere(
+                (k) => items[k] == value,
                 orElse: () => 'null',
               ),
             ),

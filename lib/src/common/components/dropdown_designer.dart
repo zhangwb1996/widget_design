@@ -5,7 +5,7 @@
 /// Created Date: Monday, 2023-02-13 9:54:48 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 11:25:25 pm
+/// Last Modified: Wednesday, 2023-02-15 3:24:21 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -39,7 +39,6 @@ class _DropdownDesignerState extends State<DropdownDesigner> {
     debugPrint(
       "dropdown_designer items runtimeType: ${widget.items[2].runtimeType}",
     );
-    // TODO: try to pass Type as a parameter
     switch (widget.items[2].runtimeType) {
       case Alignment:
         return alignmentDropdownBuilder(

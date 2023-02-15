@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 10:31:36 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 10:26:26 pm
+/// Last Modified: Wednesday, 2023-02-15 3:31:59 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -20,14 +20,15 @@ import 'package:provider/provider.dart';
 
 import 'package:widget_design/src/models/widgets/animation_and_motion/widget.dart';
 
-class NumberDesigner extends StatefulWidget {
+class NumberDesigner<T extends AnimatedModel> extends StatefulWidget {
   const NumberDesigner({super.key});
 
   @override
-  State<NumberDesigner> createState() => _NumberDesignerState();
+  State<NumberDesigner<T>> createState() => _NumberDesignerState<T>();
 }
 
-class _NumberDesignerState extends State<NumberDesigner> {
+class _NumberDesignerState<T extends AnimatedModel>
+    extends State<NumberDesigner<T>> {
   TextEditingController controller = TextEditingController();
 
   @override
@@ -50,7 +51,7 @@ class _NumberDesignerState extends State<NumberDesigner> {
     //   (model) => model.duration,
     // );
     var dur = context.select(
-      (AnimatedAlignModel model) => model.duration,
+      (T model) => model.duration,
     );
     controller.text = dur.toString();
     controller.selection =
@@ -94,7 +95,7 @@ class _NumberDesignerState extends State<NumberDesigner> {
     // );
 
     /// Consumer
-    return Consumer<AnimatedAlignModel>(
+    return Consumer<T>(
       builder: (context, animationProperties, child) => TextField(
         controller: controller,
         onChanged: (v) {

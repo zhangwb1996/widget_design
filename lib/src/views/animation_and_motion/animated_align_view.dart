@@ -1,16 +1,16 @@
 ///
-/// File: \lib\src\views\animation_and_motion\animated_align_view.dart          
-/// Project: widget_design                                                      
+/// File: \lib\src\views\animation_and_motion\animated_align_view.dart
+/// Project: widget_design
 /// -----
 /// Created Date: Sunday, 2023-02-12 11:01:08 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 11:27:43 am                            
-/// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)                          
+/// Last Modified: Wednesday, 2023-02-15 3:28:39 pm
+/// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
 /// -----
-/// HISTORY:                                                                    
+/// HISTORY:
 /// Date      	By	Comments
 /// ----------	---	---------------------------------------------------------
 ///
@@ -60,17 +60,19 @@ class AnimatedAlignView extends StatelessWidget {
               // const RadioDesigner(),
               Selector<AnimatedAlignModel, List<AlignmentGeometry>>(
                 selector: (_, animProperties) => AlignmentList.listAlignment,
-                builder: (context, list, child) => DropdownDesignerAlignment(
+                builder: (context, list, child) =>
+                    DropdownDesignerAlignment<AnimatedAlignModel>(
                   items: list,
                 ),
               ),
               Selector<AnimatedAlignModel, Map<String, Curve>>(
                 selector: (_, animProperties) => CurveMap.mapCurve,
-                builder: (context, list, child) => DropdownDesignerCurve(
+                builder: (context, list, child) =>
+                    DropdownDesignerCurve<AnimatedAlignModel>(
                   items: list,
                 ),
               ),
-              const NumberDesigner(),
+              const NumberDesigner<AnimatedAlignModel>(),
             ],
           ),
         ),
