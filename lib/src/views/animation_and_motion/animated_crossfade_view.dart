@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 11:01:08 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 6:58:23 pm
+/// Last Modified: Thursday, 2023-02-16 11:23:56 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -56,6 +56,7 @@ class AnimatedCrossFadeView extends StatelessWidget {
           child: Column(
             children: const [
               // TODO: Hot reload
+              // Solved by import as package instead of absolute path
               // const CheckboxDesigner(),
               // const RadioDesigner(),
               // Selector<AnimatedCrossFadeModel, List<AlignmentGeometry>>(
