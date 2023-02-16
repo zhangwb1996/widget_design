@@ -5,7 +5,7 @@
 /// Created Date: Thursday, 2023-02-16 3:43:24 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 3:44:46 pm
+/// Last Modified: Thursday, 2023-02-16 3:58:53 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -29,12 +29,23 @@ class HeroPreview2 extends StatelessWidget {
   }
 }
 
-class HeroExample extends StatelessWidget {
+class HeroExample extends StatefulWidget {
   const HeroExample({super.key});
 
   @override
+  State<HeroExample> createState() => HeroExampleState();
+}
+
+class HeroExampleState extends State<HeroExample> {
+  @override
+  void dispose() {
+    timeDilation = 1;
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    timeDilation = 15.0;
+    timeDilation = 15;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Hero Sample')),
