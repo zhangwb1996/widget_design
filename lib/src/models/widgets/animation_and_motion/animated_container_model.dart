@@ -5,7 +5,7 @@
 /// Created Date: Wednesday, 2023-02-15 2:00:02 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 5:57:24 pm
+/// Last Modified: Thursday, 2023-02-16 10:04:10 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -17,7 +17,7 @@
 
 import 'package:widget_design/src/models/properties/default/widget.dart';
 
-import 'animated_model.dart';
+import 'base/animated_model.dart';
 
 class AnimatedContainerModel extends AnimatedModel {
   String _code = ' ';
@@ -37,7 +37,7 @@ class AnimatedContainerModel extends AnimatedModel {
               color: selected ? Colors.red : Colors.blue,
               alignment: selected ? Alignment.center : $alignment,
               duration: Duration(seconds: $duration),
-              curve: ${CurveMap.mapCurve.keys.firstWhere((k) => CurveMap.mapCurve[k] == super.curve)}
+              curve: ${CurveMap.mapCurve.keys.firstWhere((k) => CurveMap.mapCurve[k] == curve)}
               child: const FlutterLogo(size: 75),
             ),
           ), 

@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\models\widgets\animation_and_motion\animated_crossfade_model.dart
+/// File: \lib\src\models\widgets\animation_and_motion\animated_opacity_model.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Wednesday, 2023-02-15 2:00:02 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 10:02:53 am
+/// Last Modified: Thursday, 2023-02-16 10:14:24 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -17,19 +17,18 @@
 
 import 'base/animated_model.dart';
 
-class AnimatedCrossFadeModel extends AnimatedModel {
+class AnimatedOpacityModel extends AnimatedModel {
   String _code = ' ';
   @override
   String get code => _code;
   @override
   void setCode() {
     _code = '''
-    AnimatedCrossFade(
-      duration: Duration(seconds: $duration),
-      firstChild: const FlutterLogo(style: FlutterLogoStyle.horizontal, size: 100.0),
-      secondChild: const FlutterLogo(style: FlutterLogoStyle.stacked, size: 100.0),
-      crossFadeState: clicked ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-    )
+        AnimatedOpacity(
+          opacity: selected ? 0 : $opacityLevel,
+          duration: Duration(seconds: $duration),
+          child: const FlutterLogo(),
+        ),
 ''';
     notifyListeners();
   }

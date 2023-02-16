@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:09:16 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 5:19:51 pm
+/// Last Modified: Thursday, 2023-02-16 10:12:01 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -53,6 +53,10 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => AnimatedContainerModel(),
+          lazy: true,
+        ),
+        ChangeNotifierProvider(
+          create: (context) => AnimatedOpacityModel(),
           lazy: true,
         ),
         // curve
