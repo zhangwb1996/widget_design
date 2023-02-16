@@ -5,7 +5,7 @@
 /// Created Date: Wednesday, 2023-02-15 2:03:22 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 3:14:26 pm
+/// Last Modified: Thursday, 2023-02-16 9:57:39 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -21,14 +21,42 @@ import 'package:widget_design/src/models/properties/default/widget.dart';
 abstract class AnimatedModel extends ChangeNotifier {
   /// AlignmentGeometry
   AlignmentGeometry _alignment = Alignment.topLeft;
+  AlignmentGeometry get alignment => _alignment;
+  set alignment(value) => {
+        _alignment = value,
+        notifyListeners(),
+      };
 
   /// Duration,
   int _duration = 1;
+  int get duration => _duration;
+  set duration(int value) {
+    _duration = value;
+    notifyListeners();
+  }
 
   /// Curves
   Curve _curve = Curves.easeInCubic;
+  Curve get curve => _curve;
+  set curve(v) => {
+        _curve = v,
+        notifyListeners(),
+      };
 
+  /// interaction
   bool selected = false;
+  void setSelected() {
+    selected = !selected;
+    notifyListeners();
+  }
+
+  /// opacity
+  double _opacityLevel = 1.0;
+  get opacityLevel => _opacityLevel;
+  set opacityLevel(value) => {
+        _opacityLevel = value,
+        notifyListeners(),
+      };
 
   String _code = ' ';
   String get code => _code;
@@ -48,27 +76,4 @@ abstract class AnimatedModel extends ChangeNotifier {
 ''';
     notifyListeners();
   }
-
-  void setSelected() {
-    selected = !selected;
-    notifyListeners();
-  }
-
-  AlignmentGeometry get alignment => _alignment;
-  set alignment(value) => {
-        _alignment = value,
-        notifyListeners(),
-      };
-
-  int get duration => _duration;
-  set duration(int value) {
-    _duration = value;
-    notifyListeners();
-  }
-
-  Curve get curve => _curve;
-  set curve(v) => {
-        _curve = v,
-        notifyListeners(),
-      };
 }
