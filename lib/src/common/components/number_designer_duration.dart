@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\common\components\number_designer.dart
+/// File: \lib\src\common\components\number_designer_duration.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Tuesday, 2023-02-14 10:31:36 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 3:31:59 pm
+/// Last Modified: Thursday, 2023-02-16 11:27:57 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -18,21 +18,22 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:widget_design/src/models/widgets/animation_and_motion/widget.dart';
+import 'package:widget_design/src/models/widgets/base_model.dart';
 
-class NumberDesigner<T extends AnimatedModel> extends StatefulWidget {
-  const NumberDesigner({super.key});
+class NumberDesignerDuration<T extends BaseModel> extends StatefulWidget {
+  const NumberDesignerDuration({super.key});
 
   @override
-  State<NumberDesigner<T>> createState() => _NumberDesignerState<T>();
+  State<NumberDesignerDuration<T>> createState() => _NumberDesignerState<T>();
 }
 
-class _NumberDesignerState<T extends AnimatedModel>
-    extends State<NumberDesigner<T>> {
+class _NumberDesignerState<T extends BaseModel>
+    extends State<NumberDesignerDuration<T>> {
   TextEditingController controller = TextEditingController();
 
   @override
   void initState() {
+    controller.text = context.read<T>().duration.toString();
     super.initState();
   }
 
@@ -50,10 +51,7 @@ class _NumberDesignerState<T extends AnimatedModel>
     // var dur = context.select<AnimatedAlignModel, int>(
     //   (model) => model.duration,
     // );
-    var dur = context.select(
-      (T model) => model.duration,
-    );
-    controller.text = dur.toString();
+
     controller.selection =
         TextSelection.collapsed(offset: controller.text.length);
     // controller.
@@ -95,17 +93,20 @@ class _NumberDesignerState<T extends AnimatedModel>
     // );
 
     /// Consumer
-    return Consumer<T>(
-      builder: (context, animationProperties, child) => TextField(
-        controller: controller,
-        onChanged: (v) {
-          if (RegExp(r"^\d+$").allMatches(v, 0).isEmpty) {
-            controller.text = '';
-          }
-          animationProperties.duration =
-              int.parse(controller.text.isEmpty ? '0' : controller.text);
-          animationProperties.setCode();
-        },
+    return ListTile(
+      leading: const Text('duration'),
+      title: Consumer<T>(
+        builder: (context, model, child) => TextField(
+          controller: controller,
+          onChanged: (v) {
+            if (RegExp(r"^\d+$").allMatches(v, 0).isEmpty) {
+              controller.text = '';
+            }
+            model.duration =
+                int.parse(controller.text.isEmpty ? '0' : controller.text);
+            model.setCode();
+          },
+        ),
       ),
     );
   }
