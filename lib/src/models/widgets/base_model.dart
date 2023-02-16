@@ -5,7 +5,7 @@
 /// Created Date: Thursday, 2023-02-16 9:36:58 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 9:45:53 pm
+/// Last Modified: Friday, 2023-02-17 12:31:20 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -80,4 +80,12 @@ abstract class BaseModel extends ChangeNotifier {
     _code = 'no code';
     notifyListeners();
   }
+
+  /// aspectRatio
+  double _aspectRatio = 16 / 9;
+  double get aspectRatio => _aspectRatio;
+  set aspectRatio(double value) => {
+        _aspectRatio = value,
+        notifyListeners(),
+      };
 }

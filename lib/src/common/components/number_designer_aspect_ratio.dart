@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\common\components\number_designer_height.dart
+/// File: \lib\src\common\components\number_designer_aspect_ratio.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Tuesday, 2023-02-14 10:31:36 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 12:25:48 am
+/// Last Modified: Friday, 2023-02-17 1:05:50 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -15,27 +15,26 @@
 /// ----------	---	---------------------------------------------------------
 ///
 
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:widget_design/src/models/widgets/base_model.dart';
 
-class NumberDesignerHeight<T extends BaseModel> extends StatefulWidget {
-  const NumberDesignerHeight({super.key});
+class NumberDesignerAspectRatio<T extends BaseModel> extends StatefulWidget {
+  const NumberDesignerAspectRatio({super.key});
 
   @override
-  State<NumberDesignerHeight<T>> createState() => _NumberDesignerState<T>();
+  State<NumberDesignerAspectRatio<T>> createState() =>
+      _NumberDesignerState<T>();
 }
 
 class _NumberDesignerState<T extends BaseModel>
-    extends State<NumberDesignerHeight<T>> {
+    extends State<NumberDesignerAspectRatio<T>> {
   TextEditingController controller = TextEditingController();
 
   @override
   void initState() {
-    controller.text = context.read<T>().height.toString();
+    controller.text = context.read<T>().aspectRatio.toString();
     super.initState();
   }
 
@@ -49,24 +48,25 @@ class _NumberDesignerState<T extends BaseModel>
   Widget build(BuildContext context) {
     debugPrint('NumberDesigner.build');
 
+    // controller.selection =
+    //     TextSelection.collapsed(offset: controller.text.length);
     controller.selection = TextSelection.fromPosition(
       TextPosition(offset: controller.text.length),
     );
 
     /// Consumer
-    // TODO: support [double.infinity] ,etc
     return ListTile(
-      leading: const Text('height'),
+      leading: const Text('aspectRatio'),
       title: Consumer<T>(
         builder: (context, model, child) => TextField(
           controller: controller,
           onChanged: (text) {
             if (RegExp(r"^\d*\.?\d*$").allMatches(text, 0).isEmpty) {
-              controller.text = '120.0';
+              controller.text = '2';
             }
-
-            model.height =
-                double.parse(controller.text.isEmpty ? '120' : controller.text);
+            model.aspectRatio =
+                double.parse(controller.text.isEmpty ? '2' : controller.text);
+            // model.aspectRatio = double.parse(controller.text);
             model.setCode();
           },
         ),

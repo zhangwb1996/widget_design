@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\models\properties\alignment_list.dart
+/// File: \lib\src\models\properties\default\alignment_list.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Tuesday, 2023-02-14 10:05:09 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Tuesday, 2023-02-14 10:05:56 pm
+/// Last Modified: Friday, 2023-02-17 1:03:35 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -24,6 +24,7 @@ class AlignmentList {
     Alignment.topRight,
     Alignment.centerLeft,
     Alignment.centerRight,
+    Alignment.center,
     Alignment.bottomLeft,
     Alignment.bottomCenter,
     Alignment.bottomRight,
