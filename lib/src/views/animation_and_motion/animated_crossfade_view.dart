@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 11:01:08 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 9:05:17 pm
+/// Last Modified: Thursday, 2023-02-16 9:58:40 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -73,7 +73,7 @@ class AnimatedCrossFadeView extends StatelessWidget {
               //     items: list,
               //   ),
               // ),
-              NumberDesigner<AnimatedCrossFadeModel>(),
+              NumberDesignerDuration<AnimatedCrossFadeModel>(),
             ],
           ),
         ),

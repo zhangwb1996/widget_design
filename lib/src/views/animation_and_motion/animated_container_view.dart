@@ -5,7 +5,7 @@
 /// Created Date: Wednesday, 2023-02-15 2:12:32 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 3:28:29 pm
+/// Last Modified: Thursday, 2023-02-16 9:58:33 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -72,7 +72,7 @@ class AnimatedContainerView extends StatelessWidget {
                   items: list,
                 ),
               ),
-              const NumberDesigner<AnimatedContainerModel>(),
+              const NumberDesignerDuration<AnimatedContainerModel>(),
             ],
           ),
         ),

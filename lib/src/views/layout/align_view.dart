@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\views\animation_and_motion\animated_opacity_view.dart
+/// File: \lib\src\views\layout\align_view.dart
 /// Project: widget_design
 /// -----
-/// Created Date: Sunday, 2023-02-12 11:01:08 pm
+/// Created Date: Thursday, 2023-02-16 9:08:56 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 9:58:46 pm
+/// Last Modified: Thursday, 2023-02-16 10:08:39 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -20,11 +20,13 @@ import 'package:provider/provider.dart';
 
 import 'package:widget_design/src/common/components/widget.dart';
 import 'package:widget_design/src/common/tools/widget.dart';
-import 'package:widget_design/src/models/widgets/animation_and_motion/widget.dart';
-import 'package:widget_design/src/widgets/animation_and_motion/widget.dart';
+import 'package:widget_design/src/models/properties/default/widget.dart';
 
-class AnimatedOpacityView extends StatelessWidget {
-  const AnimatedOpacityView({super.key});
+import 'package:widget_design/src/models/widgets/layout/align_model.dart';
+import 'package:widget_design/src/widgets/layout/align_widget.dart';
+
+class AlignView extends StatelessWidget {
+  const AlignView({super.key});
   // bool selected = false;
   @override
   Widget build(BuildContext context) {
@@ -35,11 +37,11 @@ class AnimatedOpacityView extends StatelessWidget {
           child: Column(
             children: [
               // widget view
-              const Expanded(child: AnimatedOpacityWidget()),
+              const Expanded(child: AlignWidget()),
               const Divider(),
               // syntax highlighting
-              Selector<AnimatedOpacityModel, String>(
-                selector: (_, animProperties) => animProperties.code,
+              Selector<AlignModel, String>(
+                selector: (_, layout) => layout.code,
                 builder: (context, code, child) => SyntaxHighlight(
                   code: code,
                 ),
@@ -53,8 +55,16 @@ class AnimatedOpacityView extends StatelessWidget {
         SizedBox(
           width: 300,
           child: Column(
-            children: const [
-              NumberDesignerDuration<AnimatedOpacityModel>(),
+            children: [
+              Selector<AlignModel, List<AlignmentGeometry>>(
+                selector: (_, animProperties) => AlignmentList.listAlignment,
+                builder: (context, list, child) =>
+                    DropdownDesignerAlignment<AlignModel>(
+                  items: list,
+                ),
+              ),
+              const NumberDesignerHeight<AlignModel>(),
+              const NumberDesignerWidth<AlignModel>(),
             ],
           ),
         ),

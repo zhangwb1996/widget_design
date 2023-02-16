@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\models\widgets\animation_and_motion\base\animated_model.dart
+/// File: \lib\src\models\widgets\layout\base\layout_model.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Wednesday, 2023-02-15 2:03:22 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 9:47:08 pm
+/// Last Modified: Thursday, 2023-02-16 9:55:40 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -16,10 +16,9 @@
 ///
 
 import 'package:flutter/material.dart';
-import 'package:widget_design/src/models/properties/default/widget.dart';
 import 'package:widget_design/src/models/widgets/base_model.dart';
 
-abstract class AnimatedModel extends BaseModel {
+abstract class LayoutModel extends BaseModel {
   /// AlignmentGeometry
   AlignmentGeometry _alignment = Alignment.topLeft;
   @override
@@ -30,32 +29,23 @@ abstract class AnimatedModel extends BaseModel {
         notifyListeners(),
       };
 
-  /// Duration,
-  int _duration = 1;
+  /// width,
+  double _width = 120;
   @override
-  int get duration => _duration;
+  double get width => _width;
   @override
-  set duration(int value) {
-    _duration = value;
+  set width(double value) {
+    _width = value;
     notifyListeners();
   }
 
-  /// Curves
-  Curve _curve = Curves.easeInCubic;
+  /// height,
+  double _height = 120;
   @override
-  Curve get curve => _curve;
+  double get height => _height;
   @override
-  set curve(v) => {
-        _curve = v,
-        notifyListeners(),
-      };
-
-  /// interaction
-  bool _selected = false;
-  get selected => _selected;
-  @override
-  void setSelected() {
-    _selected = !_selected;
+  set height(double value) {
+    _height = value;
     notifyListeners();
   }
 
@@ -69,24 +59,27 @@ abstract class AnimatedModel extends BaseModel {
         notifyListeners(),
       };
 
+  /// code
   String _code = ' ';
   @override
   String get code => _code;
   @override
   void setCode() {
     _code = '''  
-    return GestureDetector(
-      onTap: () {
-        selected=!selected;
-      },
-      child: AnimatedAlign(
-        alignment:selected? Alignment.topRight:$alignment,
-        duration: $duration,
-        curve: ${CurveMap.mapCurve.keys.firstWhere((k) => CurveMap.mapCurve[k] == _curve)},
-        child: const FlutterLogo(size: 50.0),
+    Center(
+      child: Container(
+        height: $height,
+        width: $width,
+        color: Colors.blue[50],
+        child: const Align(
+          alignment: $alignment,
+          child: FlutterLogo(
+            size: 60,
+          ),
+        ),
       ),
-    );   
-''';
+    )  
+    ''';
     notifyListeners();
   }
 }

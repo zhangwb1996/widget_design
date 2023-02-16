@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 11:01:08 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 3:28:39 pm
+/// Last Modified: Thursday, 2023-02-16 9:58:34 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -72,7 +72,7 @@ class AnimatedAlignView extends StatelessWidget {
                   items: list,
                 ),
               ),
-              const NumberDesigner<AnimatedAlignModel>(),
+              const NumberDesignerDuration<AnimatedAlignModel>(),
             ],
           ),
         ),
