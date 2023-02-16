@@ -1,11 +1,11 @@
 ///
-/// File: \lib\widget.dart
+/// File: \lib\src\preview\widget.dart
 /// Project: widget_design
 /// -----
-/// Created Date: Thursday, 2023-02-16 11:06:06 am
+/// Created Date: Thursday, 2023-02-16 12:07:38 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 12:08:07 pm
+/// Last Modified: Thursday, 2023-02-16 12:07:59 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -15,7 +15,4 @@
 /// ----------	---	---------------------------------------------------------
 ///
 
-library widget_design;
-
-export '/src/views/widget.dart';
-export '/src/preview/widget.dart';
+export './animation_and_motion/widget.dart';
