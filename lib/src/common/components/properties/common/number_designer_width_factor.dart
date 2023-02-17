@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 10:31:36 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 2:22:14 pm
+/// Last Modified: Friday, 2023-02-17 3:09:49 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -56,7 +56,7 @@ class _NumberDesignerState<T extends BaseModel>
 
     /// Consumer
     return ListTile(
-      leading: const Text('width'),
+      leading: const Text('widthFactor'),
       title: Consumer<T>(
         builder: (context, model, child) => TextField(
           controller: controller,

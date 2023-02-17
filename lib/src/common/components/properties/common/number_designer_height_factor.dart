@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 10:31:36 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 2:21:56 pm
+/// Last Modified: Friday, 2023-02-17 3:09:38 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -54,7 +54,7 @@ class _NumberDesignerState<T extends BaseModel>
 
     /// Consumer
     return ListTile(
-      leading: const Text('height'),
+      leading: const Text('heightFactor'),
       title: Consumer<T>(
         builder: (context, model, child) => TextField(
           controller: controller,
