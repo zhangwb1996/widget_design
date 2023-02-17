@@ -5,7 +5,7 @@
 /// Created Date: Wednesday, 2023-02-15 2:03:22 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 1:55:40 pm
+/// Last Modified: Friday, 2023-02-17 3:48:28 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -64,6 +64,14 @@ abstract class LayoutModel extends BaseModel {
   double get baseline => _baseline;
   set baseline(double value) => {
         _baseline = value,
+        notifyListeners(),
+      };
+
+  /// boxfit
+  BoxFit _boxfit = BoxFit.fill;
+  BoxFit get boxfit => _boxfit;
+  set boxfit(BoxFit value) => {
+        _boxfit = value,
         notifyListeners(),
       };
 }
