@@ -5,7 +5,7 @@
 /// Created Date: Thursday, 2023-02-16 9:36:58 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 1:59:35 pm
+/// Last Modified: Friday, 2023-02-17 2:03:11 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -77,4 +77,20 @@ abstract class BaseModel extends ChangeNotifier {
   /// code
   String code = ' ';
   void setCode();
+
+  /// heightFactor
+  double _heightFactor = 1.0;
+  get heightFactor => _heightFactor;
+  set heightFactor(value) => {
+        _heightFactor = value,
+        notifyListeners(),
+      };
+
+  /// widthFactor
+  double _widthFactor = 1.0;
+  get widthFactor => _widthFactor;
+  set widthFactor(value) => {
+        _widthFactor = value,
+        notifyListeners(),
+      };
 }
