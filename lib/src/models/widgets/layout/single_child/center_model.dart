@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 2:14:50 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 2:18:53 pm
+/// Last Modified: Friday, 2023-02-17 4:17:35 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -24,15 +24,24 @@ class CenterModel extends LayoutModel {
   @override
   void setCode() {
     _code = '''
-        return Center(
-          widthFactor: $widthFactor,
-          heightFactor: $heightFactor,
-          child: Container(
-            height: 100,
-            width: 100,
-            color: Colors.blue[50],
-          ),
-        );
+    return Center(
+      child: Container(
+        color: Colors.blue,
+        child: Consumer<CenterModel>(
+          builder: (context, model, child) {
+            return Center(
+              widthFactor: $widthFactor,
+              heightFactor: $heightFactor,
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.green,
+              ),
+            );
+          },
+        ),
+      ),
+    );  
     ''';
     notifyListeners();
   }
