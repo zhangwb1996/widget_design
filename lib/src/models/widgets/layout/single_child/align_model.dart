@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\models\widgets\layout\align_model.dart
+/// File: \lib\src\models\widgets\layout\single_child\align_model.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Thursday, 2023-02-16 9:08:33 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 9:19:37 pm
+/// Last Modified: Friday, 2023-02-17 10:55:06 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -15,7 +15,7 @@
 /// ----------	---	---------------------------------------------------------
 ///
 
-import 'base/layout_model.dart';
+import '../base/layout_model.dart';
 
 class AlignModel extends LayoutModel {
   String _code = ' ';

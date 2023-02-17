@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\views\layout\align_view.dart
+/// File: \lib\src\views\layout\single_child\align_view.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Thursday, 2023-02-16 9:08:56 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 10:08:39 pm
+/// Last Modified: Friday, 2023-02-17 10:58:15 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -22,8 +22,9 @@ import 'package:widget_design/src/common/components/widget.dart';
 import 'package:widget_design/src/common/tools/widget.dart';
 import 'package:widget_design/src/models/properties/default/widget.dart';
 
-import 'package:widget_design/src/models/widgets/layout/align_model.dart';
-import 'package:widget_design/src/widgets/layout/align_widget.dart';
+import 'package:widget_design/src/models/widgets/layout/single_child/align_model.dart';
+
+import 'package:widget_design/src/widgets/layout/single_child/widget.dart';
 
 class AlignView extends StatelessWidget {
   const AlignView({super.key});

@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\widgets\layout\aspect_ratio_widget.dart
+/// File: \lib\src\widgets\layout\single_child\aspect_ratio_widget.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Friday, 2023-02-17 12:26:19 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 9:49:13 am
+/// Last Modified: Friday, 2023-02-17 10:57:55 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -17,7 +17,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:widget_design/src/models/widgets/layout/aspect_ratio_model.dart';
+import 'package:widget_design/src/models/widgets/layout/single_child/aspect_ratio_model.dart';
 
 class AspectRatioWidget extends StatelessWidget {
   const AspectRatioWidget({super.key});

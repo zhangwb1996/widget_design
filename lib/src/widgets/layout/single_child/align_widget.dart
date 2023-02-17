@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\widgets\layout\align_widget.dart
+/// File: \lib\src\widgets\layout\single_child\align_widget.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Thursday, 2023-02-16 9:10:10 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 9:22:48 pm
+/// Last Modified: Friday, 2023-02-17 10:58:02 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -17,7 +17,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:widget_design/src/models/widgets/layout/align_model.dart';
+import 'package:widget_design/src/models/widgets/layout/single_child/align_model.dart';
 
 class AlignWidget extends StatelessWidget {
   const AlignWidget({super.key});

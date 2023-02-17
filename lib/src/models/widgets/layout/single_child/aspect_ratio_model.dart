@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\models\widgets\layout\aspect_ratio_model.dart
+/// File: \lib\src\models\widgets\layout\single_child\aspect_ratio_model.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Friday, 2023-02-17 12:28:41 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 9:48:18 am
+/// Last Modified: Friday, 2023-02-17 10:55:13 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -14,7 +14,7 @@
 /// Date      	By	Comments
 /// ----------	---	---------------------------------------------------------
 ///
-import 'base/layout_model.dart';
+import '../base/layout_model.dart';
 
 class AspectRatioModel extends LayoutModel {
   String _code = ' ';

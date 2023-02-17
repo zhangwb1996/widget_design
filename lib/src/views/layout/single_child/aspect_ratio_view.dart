@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\views\layout\aspect_ratio_view.dart
+/// File: \lib\src\views\layout\single_child\aspect_ratio_view.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Friday, 2023-02-17 12:42:59 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 9:50:24 am
+/// Last Modified: Friday, 2023-02-17 10:58:26 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -20,10 +20,9 @@ import 'package:provider/provider.dart';
 
 import 'package:widget_design/src/common/components/widget.dart';
 import 'package:widget_design/src/common/tools/widget.dart';
-import 'package:widget_design/src/models/properties/default/widget.dart';
 
 import 'package:widget_design/src/models/widgets/layout/widget.dart';
-import 'package:widget_design/src/widgets/layout/widget.dart';
+import 'package:widget_design/src/widgets/layout/single_child/widget.dart';
 
 class AspectRatioView extends StatelessWidget {
   const AspectRatioView({super.key});
