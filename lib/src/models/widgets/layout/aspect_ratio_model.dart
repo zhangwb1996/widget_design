@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 12:28:41 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 1:01:20 am
+/// Last Modified: Friday, 2023-02-17 9:48:18 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -31,8 +31,8 @@ class AspectRatioModel extends LayoutModel {
       child: AspectRatio(
         aspectRatio: $aspectRatio,
         child: Container(
-          width: 100,
-          height: 50,
+          width: ${height * aspectRatio},
+          height:$height,
           color: Colors.green,
         ),
       ),

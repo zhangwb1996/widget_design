@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 12:26:19 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 1:01:54 am
+/// Last Modified: Friday, 2023-02-17 9:49:13 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -34,8 +34,8 @@ class AspectRatioWidget extends StatelessWidget {
           child: AspectRatio(
             aspectRatio: model.aspectRatio,
             child: Container(
-              width: 100,
-              height: 50,
+              width: model.height * model.aspectRatio,
+              height: model.height,
               color: Colors.green,
             ),
           ),

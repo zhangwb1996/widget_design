@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 12:42:59 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 12:59:10 am
+/// Last Modified: Friday, 2023-02-17 9:50:24 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -63,7 +63,7 @@ class AspectRatioView extends StatelessWidget {
               //     items: list,
               //   ),
               // ),
-              // const NumberDesignerHeight<AspectRatioModel>(),
+              NumberDesignerHeight<AspectRatioModel>(),
               // const NumberDesignerWidth<AspectRatioModel>(),
               NumberDesignerAspectRatio<AspectRatioModel>(),
             ],
