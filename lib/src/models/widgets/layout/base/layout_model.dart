@@ -5,7 +5,7 @@
 /// Created Date: Wednesday, 2023-02-15 2:03:22 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 1:36:26 pm
+/// Last Modified: Friday, 2023-02-17 1:55:40 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -19,46 +19,6 @@ import 'package:flutter/material.dart';
 import 'package:widget_design/src/models/widgets/base_model.dart';
 
 abstract class LayoutModel extends BaseModel {
-  /// AlignmentGeometry
-  AlignmentGeometry _alignment = Alignment.topLeft;
-  @override
-  AlignmentGeometry get alignment => _alignment;
-  @override
-  set alignment(value) => {
-        _alignment = value,
-        notifyListeners(),
-      };
-
-  /// width,
-  double _width = 120;
-  @override
-  double get width => _width;
-  @override
-  set width(double value) {
-    _width = value;
-    notifyListeners();
-  }
-
-  /// height,
-  double _height = 120;
-  @override
-  double get height => _height;
-  @override
-  set height(double value) {
-    _height = value;
-    notifyListeners();
-  }
-
-  /// opacity
-  double _opacityLevel = 1.0;
-  @override
-  get opacityLevel => _opacityLevel;
-  @override
-  set opacityLevel(value) => {
-        _opacityLevel = value,
-        notifyListeners(),
-      };
-
   /// code
   String _code = ' ';
   @override
@@ -85,9 +45,7 @@ abstract class LayoutModel extends BaseModel {
 
   /// aspectRatio
   double _aspectRatio = 16 / 9;
-  @override
   double get aspectRatio => _aspectRatio;
-  @override
   set aspectRatio(double value) => {
         _aspectRatio = value,
         notifyListeners(),
