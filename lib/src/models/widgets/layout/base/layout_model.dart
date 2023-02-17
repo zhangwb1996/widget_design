@@ -5,7 +5,7 @@
 /// Created Date: Wednesday, 2023-02-15 2:03:22 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 9:55:40 pm
+/// Last Modified: Friday, 2023-02-17 1:36:26 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -82,4 +82,30 @@ abstract class LayoutModel extends BaseModel {
     ''';
     notifyListeners();
   }
+
+  /// aspectRatio
+  double _aspectRatio = 16 / 9;
+  @override
+  double get aspectRatio => _aspectRatio;
+  @override
+  set aspectRatio(double value) => {
+        _aspectRatio = value,
+        notifyListeners(),
+      };
+
+  /// baselineType
+  TextBaseline _baselineType = TextBaseline.alphabetic;
+  TextBaseline get baselineType => _baselineType;
+  set baselineType(TextBaseline value) => {
+        _baselineType = value,
+        notifyListeners(),
+      };
+
+  /// baseline
+  double _baseline = 100;
+  double get baseline => _baseline;
+  set baseline(double value) => {
+        _baseline = value,
+        notifyListeners(),
+      };
 }
