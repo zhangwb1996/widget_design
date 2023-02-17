@@ -5,7 +5,7 @@
 /// Created Date: Wednesday, 2023-02-15 10:19:54 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 3:42:48 pm
+/// Last Modified: Friday, 2023-02-17 5:10:44 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -24,3 +24,4 @@ export './hero/widget.dart';
 
 export 'decorated_box_transition_preview.dart';
 export 'rotation_transition_preview.dart';
+export 'animated_padding_preview.dart';
