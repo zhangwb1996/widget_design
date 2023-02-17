@@ -5,7 +5,7 @@
 /// Created Date: Thursday, 2023-02-16 9:10:10 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 10:58:02 am
+/// Last Modified: Friday, 2023-02-17 2:25:58 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -26,14 +26,14 @@ class AlignWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     // return Container();
     return Consumer<AlignModel>(
-      builder: (context, layout, child) {
+      builder: (context, model, child) {
         return Center(
           child: Container(
-            height: layout.height,
-            width: layout.width,
+            height: model.height,
+            width: model.width,
             color: Colors.blue[50],
             child: Align(
-              alignment: layout.alignment,
+              alignment: model.alignment,
               child: const FlutterLogo(
                 size: 60,
               ),
