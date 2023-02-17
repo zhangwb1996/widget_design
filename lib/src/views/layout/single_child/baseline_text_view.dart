@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 11:34:49 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 1:24:13 pm
+/// Last Modified: Friday, 2023-02-17 2:12:37 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -17,7 +17,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:widget_design/src/common/components/number_designer_baseline.dart';
 
 import 'package:widget_design/src/common/components/widget.dart';
 import 'package:widget_design/src/common/tools/widget.dart';
