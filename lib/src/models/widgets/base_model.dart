@@ -5,7 +5,7 @@
 /// Created Date: Thursday, 2023-02-16 9:36:58 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 2:03:11 pm
+/// Last Modified: Friday, 2023-02-17 4:33:37 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -93,4 +93,12 @@ abstract class BaseModel extends ChangeNotifier {
         _widthFactor = value,
         notifyListeners(),
       };
+
+  /// FractionalOffset for FractionallySizedBox
+  FractionalOffset get fractionalOffset => _fractionalOffset;
+  set fractionalOffset(FractionalOffset value) => {
+        _fractionalOffset = value,
+        notifyListeners(),
+      };
+  FractionalOffset _fractionalOffset = FractionalOffset.topLeft;
 }
