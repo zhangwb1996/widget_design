@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 5:04:34 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 5:05:04 pm
+/// Last Modified: Friday, 2023-02-17 5:19:15 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -16,3 +16,4 @@
 ///
 
 export './single_child/widget.dart';
+export './multi_child/widget.dart';
