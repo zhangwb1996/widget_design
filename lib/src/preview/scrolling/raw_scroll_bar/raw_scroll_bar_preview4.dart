@@ -26,6 +26,12 @@ class RawScrollbarPreview4 extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<RawScrollbarPreview4> {
   final ScrollController _controllerOne = ScrollController();
+  @override
+  void dispose() {
+    _controllerOne.dispose();
+    super.dispose();
+  }
+  
 
   @override
   Widget build(BuildContext context) {

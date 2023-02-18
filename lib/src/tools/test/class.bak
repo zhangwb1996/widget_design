@@ -1,0 +1,4 @@
+
+class _MyStatefulWidgetState extends State<MyRawScrollbarPreview1> {
+  final ScrollClass _firstClass = ScrollClass();
+}

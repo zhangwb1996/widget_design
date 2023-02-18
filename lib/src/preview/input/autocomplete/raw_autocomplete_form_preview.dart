@@ -45,6 +45,12 @@ class AutocompleteFormExample extends StatefulWidget {
 class AutocompleteFormExampleState extends State<AutocompleteFormExample> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _textEditingController = TextEditingController();
+  @override
+  void dispose() {
+    _textEditingController.dispose();
+    super.dispose();
+  }
+  
   String? _dropdownValue;
   String? _autocompleteSelection;
 

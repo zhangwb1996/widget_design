@@ -27,6 +27,12 @@ class BottomNavigationBarPreview3 extends StatefulWidget {
 class _MyStatefulWidgetState extends State<BottomNavigationBarPreview3> {
   int _selectedIndex = 0;
   final ScrollController _homeController = ScrollController();
+  @override
+  void dispose() {
+    _homeController.dispose();
+    super.dispose();
+  }
+  
 
   Widget _listViewBody() {
     return ListView.separated(
