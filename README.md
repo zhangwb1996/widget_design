@@ -2,13 +2,13 @@
 
 [widget_design_previewer](https://github.com/zhangwb1996/widget_design_previewer)
 
-view = [widget + tools] + component
+view = [widget + common/tools] + common/components
 
 ```dart
 view:
     // widgets
     ......
-        // tools
+        // common/tools
         ........
-    // components
+    // common/components
     .....
