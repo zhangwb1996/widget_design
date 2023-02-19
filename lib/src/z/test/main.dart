@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\tools\test\main.dart
+/// File: \lib\src\z\test\main.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Saturday, 2023-02-18 11:43:18 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Saturday, 2023-02-18 1:32:23 pm
+/// Last Modified: Monday, 2023-02-20 1:32:57 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -80,13 +80,13 @@ void main(List<String> args) {
     ///
     /// But it print: `(  final ScrollClass _firstClass = ScrollClass;)`,
     /// there are a pair of extra circle brackets;
-    print(origin);
+    // print(origin);
 
     /// And here print: `()`;
     // print("ass".allMatches(File('./class.bak').toString()).first.toString());
-    print(origin.allMatches(File('./class.bak').readAsStringSync().toString()));
+    // print(origin.allMatches(File('./class.bak').readAsStringSync().toString()));
     //     .toString());
   } catch (e) {
-    print(e);
+    // print(e);
   }
 }

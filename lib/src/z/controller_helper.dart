@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\tools\controller_helper.dart
+/// File: \lib\src\z\controller_helper.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Saturday, 2023-02-18 11:13:06 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Saturday, 2023-02-18 1:35:26 pm
+/// Last Modified: Monday, 2023-02-20 1:32:47 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -58,10 +58,10 @@ void controllerHelper(String path) {
       file.writeAsStringSync('$newFile\n', mode: FileMode.writeOnly);
     }
   } catch (e) {
-    print("exception");
+    // print("exception");
 
-    print(origin.length);
-    print(RegExp(r"[c|C]ontroller").allMatches(origin));
-    print(e);
+    // print(origin.length);
+    // print(RegExp(r"[c|C]ontroller").allMatches(origin));
+    // print(e);
   }
 }

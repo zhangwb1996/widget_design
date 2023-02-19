@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\common\components\number_designer_height.dart
+/// File: \lib\src\common\components\properties\common\number_designer_height.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Tuesday, 2023-02-14 10:31:36 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 12:25:48 am
+/// Last Modified: Monday, 2023-02-20 1:33:01 am
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -14,8 +14,6 @@
 /// Date      	By	Comments
 /// ----------	---	---------------------------------------------------------
 ///
-
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
