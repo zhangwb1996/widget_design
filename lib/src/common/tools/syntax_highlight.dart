@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 7:16:31 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 2:49:32 pm
+/// Last Modified: Sunday, 2023-02-19 3:55:31 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -16,12 +16,15 @@
 ///
 
 import 'package:flutter/material.dart';
-import 'package:flutter_highlight/flutter_highlight.dart';
+import 'package:flutter_code_editor/flutter_code_editor.dart';
 // import 'package:flutter_highlight/themes/ascetic.dart';
-import 'package:flutter_highlight/themes/github.dart';
+// import 'package:flutter_highlight/themes/github.dart';
+import 'package:flutter_highlight/themes/monokai-sublime.dart';
+import 'package:highlight/languages/dart.dart';
 
 class SyntaxHighlight extends StatelessWidget {
   final String code;
+
   const SyntaxHighlight({
     super.key,
     required this.code,
@@ -32,26 +35,16 @@ class SyntaxHighlight extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       constraints: const BoxConstraints.expand(height: 200),
-      child: SingleChildScrollView(
-        child: HighlightView(
-          // The original code to be highlighted
-          code,
-
-          // Specify language
-          // It is recommended to give it a value for performance
-          language: 'dart',
-
-          // Specify highlight theme
-          // All available themes are listed in `themes` folder
-          theme: githubTheme,
-
-          // Specify padding
-          padding: const EdgeInsets.all(12),
-
-          // Specify text style
-          textStyle: const TextStyle(
-            // fontFamily: 'My awesome monospace font',
-            fontSize: 16,
+      child: CodeTheme(
+        data: CodeThemeData(styles: monokaiSublimeTheme),
+        child: SingleChildScrollView(
+          child: TextField(
+            readOnly: true,
+            controller: CodeController(
+              text: code, // Initial code
+              language: dart,
+            ),
+            maxLines: null,
           ),
         ),
       ),
