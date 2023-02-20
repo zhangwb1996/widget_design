@@ -5,7 +5,7 @@
 /// Created Date: Saturday, 2023-02-18 12:33:19 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Monday, 2023-02-20 3:09:50 pm
+/// Last Modified: Monday, 2023-02-20 9:05:13 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -30,11 +30,11 @@ class SelectionAllOrNoneContainerPreivew extends StatelessWidget {
       home: SelectionArea(
         child: Scaffold(
           appBar: AppBar(title: const Text(_title)),
-          body: const Center(
+          body: Center(
             child: SelectionAllOrNoneContainer(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
+                children: const <Widget>[
                   Text('Row 1'),
                   Text('Row 2'),
                   Text('Row 3'),

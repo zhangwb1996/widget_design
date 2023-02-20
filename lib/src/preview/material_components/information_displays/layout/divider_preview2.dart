@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 11:46:43 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Monday, 2023-02-20 3:09:54 pm
+/// Last Modified: Monday, 2023-02-20 9:05:35 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -22,11 +22,11 @@ class DividerPreview2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
-          children: <Widget>[
+          children: const <Widget>[
             Expanded(
               child: Card(
                 child: SizedBox.expand(),

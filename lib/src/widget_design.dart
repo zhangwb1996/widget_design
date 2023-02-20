@@ -5,7 +5,7 @@
 /// Created Date: Sunday, 2023-02-12 3:10:42 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Monday, 2023-02-20 3:10:07 pm
+/// Last Modified: Monday, 2023-02-20 9:05:03 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -29,8 +29,8 @@ class WidgetDesign extends StatefulWidget {
 class _WidgetDesignState extends State<WidgetDesign> {
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
+    return Row(
+      children: const [
         Placeholder(fallbackWidth: 200),
         VerticalDivider(),
         Expanded(

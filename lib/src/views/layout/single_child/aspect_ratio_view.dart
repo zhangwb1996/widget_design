@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 12:42:59 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Monday, 2023-02-20 3:09:26 pm
+/// Last Modified: Monday, 2023-02-20 9:03:26 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -51,10 +51,10 @@ class AspectRatioView extends StatelessWidget {
         // divider
         const VerticalDivider(),
         // designer
-        const SizedBox(
+        SizedBox(
           width: 300,
           child: Column(
-            children: [
+            children: const [
               // Selector<AspectRatioModel, List<AlignmentGeometry>>(
               //   selector: (_, animProperties) => AlignmentList.listAlignment,
               //   builder: (context, list, child) =>

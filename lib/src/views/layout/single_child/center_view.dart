@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 2:23:40 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Monday, 2023-02-20 3:09:37 pm
+/// Last Modified: Monday, 2023-02-20 9:03:31 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -51,10 +51,10 @@ class CenterView extends StatelessWidget {
         // divider
         const VerticalDivider(),
         // designer
-        const SizedBox(
+        SizedBox(
           width: 300,
           child: Column(
-            children: [
+            children: const [
               NumberDesignerHeightFactor<CenterModel>(),
               NumberDesignerWidthFactor<CenterModel>(),
             ],

@@ -5,7 +5,7 @@
 /// Created Date: Saturday, 2023-02-18 12:39:27 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Monday, 2023-02-20 3:09:46 pm
+/// Last Modified: Monday, 2023-02-20 9:05:08 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -28,11 +28,11 @@ class SelectionAreaPreview extends StatelessWidget {
       title: _title,
       home: Scaffold(
         appBar: AppBar(title: const Text(_title)),
-        body: const Center(
+        body: Center(
           child: SelectionArea(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
+              children: const <Widget>[
                 Text('Selectable text'),
                 SelectionContainer.disabled(child: Text('Non-selectable text')),
                 Text('Selectable text'),

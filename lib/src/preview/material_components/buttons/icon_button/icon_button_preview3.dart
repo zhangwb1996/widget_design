@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 10:34:11 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Monday, 2023-02-20 3:08:57 pm
+/// Last Modified: Monday, 2023-02-20 9:05:43 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -22,10 +22,10 @@ class IconButtonPreview3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(4.0),
+    return Padding(
+      padding: const EdgeInsets.all(4.0),
       child: Row(
-        children: <Widget>[
+        children: const <Widget>[
           Spacer(),
           ButtonTypesGroup(enabled: true),
           ButtonTypesGroup(enabled: false),
