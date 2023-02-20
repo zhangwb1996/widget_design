@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\common\components\dropdown_designer.dart
+/// File: \lib\src\common\components\temp\dropdown_designer.dart
 /// Project: widget_design
 /// -----
 /// Created Date: Monday, 2023-02-13 9:54:48 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Wednesday, 2023-02-15 3:24:21 pm
+/// Last Modified: Monday, 2023-02-20 11:40:40 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -121,7 +121,7 @@ class _DropdownDesignerState extends State<DropdownDesigner> {
         items: widget.items.map<DropdownMenuItem<dynamic>>((value) {
           return DropdownMenuItem<dynamic>(
             value: value,
-            // TODO: show name of the curve instead of the function
+            // [·]TODO: show name of the curve instead of the function
             // Solved
             child: Text(value.toString()),
           );
