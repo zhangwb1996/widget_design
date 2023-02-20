@@ -5,7 +5,7 @@
 /// Created Date: Thursday, 2023-02-16 4:26:34 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-02-16 4:27:00 pm
+/// Last Modified: Monday, 2023-02-20 3:08:44 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -34,8 +34,8 @@ class CupertinoIndicatorExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-        navigationBar: const CupertinoNavigationBar(
+    return const CupertinoPageScaffold(
+        navigationBar: CupertinoNavigationBar(
           middle: Text('CupertinoActivityIndicator Sample'),
         ),
         child: Center(
@@ -44,7 +44,7 @@ class CupertinoIndicatorExample extends StatelessWidget {
             children: <Widget>[
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
+                children: <Widget>[
                   // Cupertino activity indicator with default properties.
                   CupertinoActivityIndicator(),
                   SizedBox(height: 10),
@@ -53,7 +53,7 @@ class CupertinoIndicatorExample extends StatelessWidget {
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
+                children: <Widget>[
                   // Cupertino activity indicator with custom radius and color.
                   CupertinoActivityIndicator(
                       radius: 20.0, color: CupertinoColors.activeBlue),
@@ -66,7 +66,7 @@ class CupertinoIndicatorExample extends StatelessWidget {
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
+                children: <Widget>[
                   // Cupertino activity indicator with custom radius and disabled
                   // animation.
                   CupertinoActivityIndicator(radius: 20.0, animating: false),

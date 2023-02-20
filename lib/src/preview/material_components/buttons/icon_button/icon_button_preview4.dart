@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 10:34:11 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 10:36:19 pm
+/// Last Modified: Monday, 2023-02-20 3:09:07 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -27,61 +27,55 @@ class IconButtonPreview4 extends StatefulWidget {
 class _DemoIconToggleButtonsState extends State<IconButtonPreview4> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 // Standard IconButton
-                children: const <Widget>[
+                children: <Widget>[
                   DemoIconToggleButton(isEnabled: true),
                   SizedBox(width: 10),
                   DemoIconToggleButton(isEnabled: false),
                 ]),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
-                  // Filled IconButton
-                  DemoIconToggleButton(
-                    isEnabled: true,
-                    getDefaultStyle: enabledFilledButtonStyle,
-                  ),
-                  SizedBox(width: 10),
-                  DemoIconToggleButton(
-                    isEnabled: false,
-                    getDefaultStyle: disabledFilledButtonStyle,
-                  )
-                ]),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
-                  // Filled Tonal IconButton
-                  DemoIconToggleButton(
-                    isEnabled: true,
-                    getDefaultStyle: enabledFilledTonalButtonStyle,
-                  ),
-                  SizedBox(width: 10),
-                  DemoIconToggleButton(
-                    isEnabled: false,
-                    getDefaultStyle: disabledFilledTonalButtonStyle,
-                  ),
-                ]),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
-                  // Outlined IconButton
-                  DemoIconToggleButton(
-                    isEnabled: true,
-                    getDefaultStyle: enabledOutlinedButtonStyle,
-                  ),
-                  SizedBox(width: 10),
-                  DemoIconToggleButton(
-                    isEnabled: false,
-                    getDefaultStyle: disabledOutlinedButtonStyle,
-                  ),
-                ]),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+              // Filled IconButton
+              DemoIconToggleButton(
+                isEnabled: true,
+                getDefaultStyle: enabledFilledButtonStyle,
+              ),
+              SizedBox(width: 10),
+              DemoIconToggleButton(
+                isEnabled: false,
+                getDefaultStyle: disabledFilledButtonStyle,
+              )
+            ]),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+              // Filled Tonal IconButton
+              DemoIconToggleButton(
+                isEnabled: true,
+                getDefaultStyle: enabledFilledTonalButtonStyle,
+              ),
+              SizedBox(width: 10),
+              DemoIconToggleButton(
+                isEnabled: false,
+                getDefaultStyle: disabledFilledTonalButtonStyle,
+              ),
+            ]),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+              // Outlined IconButton
+              DemoIconToggleButton(
+                isEnabled: true,
+                getDefaultStyle: enabledOutlinedButtonStyle,
+              ),
+              SizedBox(width: 10),
+              DemoIconToggleButton(
+                isEnabled: false,
+                getDefaultStyle: disabledOutlinedButtonStyle,
+              ),
+            ]),
           ]),
     );
   }

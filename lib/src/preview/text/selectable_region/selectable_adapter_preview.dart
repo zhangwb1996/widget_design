@@ -5,7 +5,7 @@
 /// Created Date: Saturday, 2023-02-18 12:33:19 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Saturday, 2023-02-18 12:36:11 am
+/// Last Modified: Monday, 2023-02-20 3:10:01 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -30,10 +30,10 @@ class SelectableAdapterPreview extends StatelessWidget {
       home: SelectionArea(
         child: Scaffold(
           appBar: AppBar(title: const Text(_title)),
-          body: Center(
+          body: const Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
+              children: <Widget>[
                 Text('Select this icon', style: TextStyle(fontSize: 30)),
                 SizedBox(height: 10),
                 MySelectableAdapter(child: Icon(Icons.key, size: 30)),

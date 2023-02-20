@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 11:17:23 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 11:18:26 pm
+/// Last Modified: Monday, 2023-02-20 3:09:57 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -27,6 +27,7 @@ class CardPreview3 extends StatelessWidget {
           colorSchemeSeed: const Color(0xff6750a4), useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(title: const Text('Card Examples')),
+        // ignore: prefer_const_constructors
         body: Column(
           children: const <Widget>[
             Spacer(),

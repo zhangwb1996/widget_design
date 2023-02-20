@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 3:49:59 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 3:52:12 pm
+/// Last Modified: Monday, 2023-02-20 3:09:21 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -51,10 +51,10 @@ class BoxFitView extends StatelessWidget {
         // divider
         const VerticalDivider(),
         // designer
-        SizedBox(
+        const SizedBox(
           width: 300,
           child: Column(
-            children: const [
+            children: [
               DropdownDesignerBoxfit<BoxFitModel>(),
             ],
           ),

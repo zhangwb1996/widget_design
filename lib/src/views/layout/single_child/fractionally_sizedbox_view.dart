@@ -5,7 +5,7 @@
 /// Created Date: Friday, 2023-02-17 4:36:45 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Friday, 2023-02-17 4:53:53 pm
+/// Last Modified: Monday, 2023-02-20 3:09:41 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -51,10 +51,10 @@ class FractionallySizedBoxView extends StatelessWidget {
         // divider
         const VerticalDivider(),
         // designer
-        SizedBox(
+        const SizedBox(
           width: 300,
           child: Column(
-            children: const [
+            children: [
               DropdownDesignerFractionalOffset<FractionallySizedBoxModel>(),
               NumberDesignerWidthFactor<FractionallySizedBoxModel>(),
               NumberDesignerHeightFactor<FractionallySizedBoxModel>(),
