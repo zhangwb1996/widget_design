@@ -5,7 +5,7 @@
 /// Created Date: Tuesday, 2023-02-14 10:31:36 am
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Monday, 2023-02-20 1:33:01 am
+/// Last Modified: Monday, 2023-02-20 11:41:14 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -52,7 +52,7 @@ class _NumberDesignerState<T extends BaseModel>
     );
 
     /// Consumer
-    // TODO: support [double.infinity] ,etc
+    // [ ]TODO: support [double.infinity] ,etc
     return ListTile(
       leading: const Text('height'),
       title: Consumer<T>(
