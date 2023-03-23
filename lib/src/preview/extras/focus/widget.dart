@@ -1,11 +1,11 @@
 ///
-/// File: \lib\src\preview\extras\widget.dart
+/// File: \lib\src\preview\extras\focus\widget.dart
 /// Project: widget_design
 /// -----
-/// Created Date: Saturday, 2023-03-18 11:09:47 pm
+/// Created Date: Thursday, 2023-03-23 12:45:50 pm
 /// Author: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
-/// Last Modified: Thursday, 2023-03-23 12:46:03 pm
+/// Last Modified: Thursday, 2023-03-23 12:48:35 pm
 /// Modified By: Wenbo Zhang (zhangwb1996@outlook.com)
 /// -----
 /// Copyright (c) 2023
@@ -15,5 +15,4 @@
 /// ----------	---	---------------------------------------------------------
 ///
 
-export './focus/widget.dart';
-export './show_modal_bottom_sheet/widget.dart';
+export './focus_scope.dart' show FocusScopePreviewer;
